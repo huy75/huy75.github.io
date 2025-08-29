@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><script type='text/javascript' src='https://www.genspark.ai/uNAkhYj1XTNZTtC6okUayZmKXO4_StooSjQdTGNfccBC8MM87L3DxNXEiM0JQfeQ8heYuTyql1Ktf50099V2cA=='></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration Redirections Netlify - Paris Kung Fu</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+         {
+            body { -webkit-print-color-adjust: exact; }
+        }
+        .code-block {
+            background-color: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="max-w-4xl mx-auto p-6">
+        <!-- Header -->
+        <div class="bg-red-800 text-white p-6 rounded-lg mb-8 text-center">
+            <h1 class="text-3xl font-bold mb-2">
+                <i class="fas fa-route mr-3"></i>
+                Configuration Redirections Netlify
+            </h1>
+            <p class="text-xl">Domaine Infomaniak → Hébergement Netlify</p>
+            <p class="text-lg opacity-90">pariskungfu.com</p>
+        </div>
+
+        <!-- Étape 1: Fichier _redirects -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-red-800 mb-4">
+                <i class="fas fa-file-code mr-2"></i>
+                Étape 1 : Créer le fichier _redirects
+            </h2>
+            
+            <div class="mb-6">
+                <p class="text-lg mb-4">Créez un fichier nommé <code class="bg-gray-200 px-2 py-1 rounded">_redirects</code> (sans extension) à la racine de votre projet :</p>
+                
+                <div class="code-block">
+<pre># Redirections pour pariskungfu.com
+# Ancien site avec # vers nouvelles pages HTML
+
+# Page d'accueil
+/# /index.html 301
+/#accueil /index.html 301
+
+# Menu Histoire
+/#histoire /histoire-shaolin.html 301
+/#histoire-shaolin /histoire-shaolin.html 301
+/#histoire-pei-mei /histoire-pei-mei.html 301
+/#genealogie /genealogie.html 301
+
+# Menu Grand-Maître Nam Anh
+/#grand-maitre /biographie.html 301
+/#biographie /biographie.html 301
+/#recits /recits.html 301
+/#interview /interview.html 301
+/#tele-monde /interview.html 301
+
+# Menu Enseignement
+/#enseignement /style-pei-mei.html 301
+/#style /style-pei-mei.html 301
+/#style-pei-mei /style-pei-mei.html 301
+/#bienfaits /bienfaits.html 301
+/#programme /programme.html 301
+
+# Menu Philosophie
+/#philosophie /voie-kung-fu.html 301
+/#voie-kung-fu /voie-kung-fu.html 301
+/#trois-philosophies /trois-philosophies.html 301
+/#3-philosophies /trois-philosophies.html 301
+/#cinq-respects /cinq-respects.html 301
+/#5-respects /cinq-respects.html 301
+/#regle-jade /regle-jade.html 301
+
+# Menu Infos Pratiques
+/#infos /contact.html 301
+/#contact /contact.html 301
+/#questions /questions-reponses.html 301
+/#faq /questions-reponses.html 301
+/#bonne-ecole /bonne-ecole.html 301
+
+# Redirections génériques
+/* /index.html 404</pre>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4">
+                <p class="text-blue-800"><i class="fas fa-info-circle mr-2"></i><strong>Important :</strong> Placez ce fichier à la racine, au même niveau que <code>index.html</code></p>
+            </div>
+        </div>
+
+        <!-- Étape 2: Structure fichiers -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-red-800 mb-4">
+                <i class="fas fa-folder-tree mr-2"></i>
+                Étape 2 : Structure finale des fichiers
+            </h2>
+            
+            <div class="code-block">
+<pre>Votre répertoire Netlify/
+├── _redirects          ← NOUVEAU fichier
+├── _headers           ← GARDER l'existant
+├── index.html
+├── histoire-shaolin.html
+├── histoire-pei-mei.html
+├── genealogie.html
+├── biographie.html
+├── recits.html
+├── interview.html
+├── style-pei-mei.html
+├── bienfaits.html
+├── programme.html
+├── voie-kung-fu.html
+├── trois-philosophies.html
+├── cinq-respects.html
+├── regle-jade.html
+├── contact.html
+├── questions-reponses.html
+└── bonne-ecole.html</pre>
+            </div>
+        </div>
+
+        <!-- Étape 3: Configuration Infomaniak -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-red-800 mb-4">
+                <i class="fas fa-globe mr-2"></i>
+                Étape 3 : Configuration domaine Infomaniak
+            </h2>
+            
+            <div class="space-y-6">
+                <div class="border-l-4 border-green-500 pl-4">
+                    <h3 class="text-xl font-semibold text-green-700 mb-2">1. Connexion Infomaniak</h3>
+                    <p>Connectez-vous à votre <strong>Manager Infomaniak</strong></p>
+                </div>
+
+                <div class="border-l-4 border-green-500 pl-4">
+                    <h3 class="text-xl font-semibold text-green-700 mb-2">2. Gestion DNS</h3>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>Allez dans <strong>Domaines</strong> → <strong>pariskungfu.com</strong></li>
+                        <li>Cliquez sur <strong>Gestion DNS</strong></li>
+                    </ul>
+                </div>
+
+                <div class="border-l-4 border-green-500 pl-4">
+                    <h3 class="text-xl font-semibold text-green-700 mb-2">3. Configuration enregistrements DNS</h3>
+                    <div class="code-block">
+<pre># Supprimez les anciens enregistrements A et CNAME
+# Ajoutez ces nouveaux enregistrements :
+
+Type: CNAME
+Nom: www
+Valeur: [votre-site].netlify.app
+
+Type: A
+Nom: @
+Valeur: 75.2.60.5
+
+# Enregistrement A alternatif Netlify :
+Type: A
+Nom: @
+Valeur: 104.198.14.52</pre>
+                    </div>
+                </div>
+
+                <div class="border-l-4 border-green-500 pl-4">
+                    <h3 class="text-xl font-semibold text-green-700 mb-2">4. Configuration Netlify</h3>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>Dans Netlify → <strong>Site Settings</strong> → <strong>Domain Management</strong></li>
+                        <li>Ajoutez <strong>pariskungfu.com</strong> et <strong>www.pariskungfu.com</strong></li>
+                        <li>Activez <strong>Force HTTPS</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Étape 4: Tests et vérifications -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-red-800 mb-4">
+                <i class="fas fa-check-circle mr-2"></i>
+                Étape 4 : Tests et vérifications
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-gray-800 mb-3">
+                        <i class="fas fa-link text-blue-600 mr-2"></i>
+                        Tests redirections
+                    </h3>
+                    <ul class="text-sm space-y-1">
+                        <li>• <code>pariskungfu.com/#histoire</code> → <code>pariskungfu.com/histoire-shaolin.html</code></li>
+                        <li>• <code>pariskungfu.com/#biographie</code> → <code>pariskungfu.com/biographie.html</code></li>
+                        <li>• <code>pariskungfu.com/#contact</code> → <code>pariskungfu.com/contact.html</code></li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-gray-800 mb-3">
+                        <i class="fas fa-tools text-green-600 mr-2"></i>
+                        Outils de vérification
+                    </h3>
+                    <ul class="text-sm space-y-1">
+                        <li>• Test redirections : <code>curl -I</code></li>
+                        <li>• Google Console : Soumettre sitemap</li>
+                        <li>• PageSpeed Insights : Performance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Configuration avancée -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-red-800 mb-4">
+                <i class="fas fa-cogs mr-2"></i>
+                Configuration avancée (Optionnelle)
+            </h2>
+            
+            <div class="space-y-4">
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+                    <h3 class="font-semibold text-yellow-800 mb-2">Redirections avec paramètres</h3>
+                    <div class="code-block">
+<pre># Si besoin de conserver des paramètres URL
+/#histoire?section=:section /histoire-:section.html 301
+/#contact?page=:page /contact.html?page=:page 301</pre>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+                    <h3 class="font-semibold text-blue-800 mb-2">Gestion 404 personnalisée</h3>
+                    <p class="text-sm mb-2">Créez un fichier <code>404.html</code> personnalisé</p>
+                    <div class="code-block">
+<pre># Dans _redirects, ajoutez :
+/* /404.html 404</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Monitoring SEO -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-red-800 mb-4">
+                <i class="fas fa-chart-line mr-2"></i>
+                Monitoring SEO post-déploiement
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-semibold mb-3">
+                        <i class="fab fa-google text-blue-600 mr-2"></i>
+                        Google Console
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Soumettre nouveau sitemap</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Vérifier indexation des 17 pages</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Surveiller erreurs 404</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Analyser performance mobile</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-3">
+                        <i class="fas fa-tachometer-alt text-orange-600 mr-2"></i>
+                        Performance
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Test vitesse PageSpeed</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Vérifier Core Web Vitals</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Optimiser images si nécessaire</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Surveiller temps de chargement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Résumé final -->
+        <div class="bg-gradient-to-r from-red-800 to-red-600 text-white rounded-lg p-6 text-center">
+            <h2 class="text-2xl font-bold mb-4">
+                <i class="fas fa-flag-checkered mr-2"></i>
+                Résumé de la migration
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+                <div>
+                    <div class="text-3xl font-bold text-yellow-300">1</div>
+                    <div class="text-sm">Page avec #</div>
+                    <div class="text-lg font-semibold">→ 17 Pages HTML</div>
+                </div>
+                
+                <div>
+                    <div class="text-3xl font-bold text-yellow-300">SEO</div>
+                    <div class="text-sm">URLs optimisées</div>
+                    <div class="text-lg font-semibold">Performance ↑</div>
+                </div>
+                
+                <div>
+                    <div class="text-3xl font-bold text-yellow-300">301</div>
+                    <div class="text-sm">Redirections</div>
+                    <div class="text-lg font-semibold">Référencement préservé</div>
+                </div>
+            </div>
+            
+            <div class="mt-6 p-4 bg-white bg-opacity-20 rounded-lg">
+                <p class="text-lg font-semibold">🎯 Votre site pariskungfu.com sera maintenant parfaitement optimisé pour le SEO !</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center text-gray-500 text-sm mt-8 pb-8">
+            <p><i class="fas fa-yin-yang text-red-600 mr-1"></i> École Pei Mei Orthodoxe Nam Anh Kung Fu - Paris</p>
+            <p class="mt-2">"Beaucoup de chemins mènent à la Voie, mais il n'y en a essentiellement que deux : l'esprit et la pratique. Bodhidharma."</p>
+        </div>
+    </div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"976bab1c5a6e9eae","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDjWHBLxeLCuDg%2F%2F%2Fw%2BvIimbOIzKG%2FS%2FsX%2FAlURVXmZXbI6BQmb2UtE1bht0bvOIytYh2Ux7pd9XaG7iK6%2BqyGd18IazenLiifpCPE7uxHSFN%2BGFr7HpGGCE7NnPquF2r7Ftn9CKC5k7xK2%2BOM3%2BOxKqAO7ebo%2FVfijbGq36QZfnlBstWtranm6CENwZ%2FUAzm8VsTGBlZS%2Brmwcx7CyVJTu5KLC%2BghUQVEOL1hAKfyj5iBapKLmEL%2FlBCGCAQ%2BOwcipSgFCtTghaft4Z1lTw%2BXC3yYi7NE2sizrI2iOUdddQQ%2BlFUJOtftcFHUEXv8TOiRfwsPfI59U20uNO0adWDLCy6LT2o2IYNSu0U8iNlkfOkP2tWs%2BMM7tgyfcnkUQS1pTNoY1UFk8qGuYwdXWVNjnH6HeP7JxIyyP2Qf4Itv%2FQzg%2F%2Fp9KprWQVBii0o7mxypUj2FqrNHWflPhPZwcQaz7F5DzBzYcm3DWrtXxEXBEtgQXcgfZ6r5dyscTm%2FBFa1AA%3D%3D";
+        window.__genspark_locale = "fr-FR";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDjWHBLxeLCuDg///w+vIimbOIzKG/S/sX/AlURVXmZXbI6BQmb2UtE1bht0bvOIytYh2Ux7pd9XaG7iK6+qyGd18IazenLiifpCPE7uxHSFN+GFr7HpGGCE7NnPquF2r7Ftn9CKC5k7xK2+OM3+OxKqAO7ebo/VfijbGq36QZfnlBstWtranm6CENwZ/UAzm8VsTGBlZS+rmwcx7CyVJTu5KLC+ghUQVEOL1hAKfyj5iBapKLmEL/lBCGCAQ+OwcipSgFCtTghaft4Z1lTw+XC3yYi7NE2sizrI2iOUdddQQ+lFUJOtftcFHUEXv8TOiRfwsPfI59U20uNO0adWDLCy6LT2o2IYNSu0U8iNlkfOkP2tWs+MM7tgyfcnkUQS1pTNoY1UFk8qGuYwdXWVNjnH6HeP7JxIyyP2Qf4Itv/Qzg//p9KprWQVBii0o7mxypUj2FqrNHWflPhPZwcQaz7F5DzBzYcm3DWrtXxEXBEtgQXcgfZ6r5dyscTm/BFa1AA==";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions-Réponses - École Pei Mei Nam Anh Kung Fu Paris</title>
+    <meta name="description" content="FAQ complète - École de Kung Fu Pei Mei traditionnel à Paris. Réponses aux questions sur l'inscription, l'âge, les conditions physiques, le combat et l'enseignement.">
+    
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --cream: #FAF8F3;
+            --beige-medium: #E8DCC0;
+            --red: #8B0000;
+            --dark-red: #660000;
+            --blue-grey: #2C3E50;
+            --blue-grey-medium: #34495E;
+            --grey-soft: #6C7B7F;
+            --cream-white: #FEFEFE;
+            --beige-warm: #F0E8D0;
+            --grey-light: #ECF0F1;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: var(--blue-grey);
+            background-color: var(--cream);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        .content-text {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation Styles */
+        .menu-item {
+            position: relative;
+            display: inline-block;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            min-width: 200px;
+            z-index: 1000;
+        }
+
+        .menu-item:hover .submenu {
+            display: block;
+        }
+
+        .submenu a {
+            display: block;
+            padding: 12px 20px;
+            color: var(--blue-grey);
+            text-decoration: none;
+            border-bottom: 1px solid var(--grey-light);
+        }
+
+        .submenu a:hover {
+            background-color: var(--cream);
+            color: var(--red);
+        }
+
+        .submenu a:last-child {
+            border-bottom: none;
+        }
+
+        .nav-link {
+            color: var(--red);
+            font-weight: 600;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: var(--cream);
+            color: var(--dark-red);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--red);
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.8);
+            z-index: 999;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.show {
+            display: block !important;
+        }
+
+        .mobile-menu-content {
+            background: white;
+            width: 280px;
+            height: 100%;
+            padding: 20px 0;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px 20px 20px;
+            border-bottom: 2px solid var(--cream);
+            margin-bottom: 20px;
+        }
+
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--red);
+            cursor: pointer;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            color: var(--red);
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .mobile-nav-link:hover {
+            background-color: var(--cream);
+        }
+
+        .mobile-submenu {
+            display: none;
+            background-color: var(--cream-white);
+        }
+
+        .mobile-submenu.active {
+            display: block;
+        }
+
+        .mobile-submenu a {
+            display: block;
+            padding: 12px 40px;
+            color: var(--grey-soft);
+            text-decoration: none;
+            border-bottom: 1px solid var(--grey-light);
+            font-weight: 400;
+        }
+
+        .mobile-submenu a:hover {
+            background-color: var(--cream);
+            color: var(--red);
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .section-red {
+            background-color: var(--red);
+            color: white;
+        }
+
+        .section-red h1, .section-red h2, .section-red h3, .section-red h4 {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-menu {
+                display: none !important;
+            }
+            .mobile-menu-button {
+                display: block !important;
+            }
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold" style="color: var(--red);">
+                    École Pei Mei Orthodoxe
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-button" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Desktop Menu -->
+                <div class="desktop-menu hidden md:flex space-x-1">
+                    <div class="menu-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <a class="nav-link" href="#">Histoire <i class="fas fa-chevron-down ml-1"></i></a>
+                        <div class="submenu">
+                            <a href="histoire-shaolin.html">Histoire Shaolin</a>
+                            <a href="histoire-pei-mei.html">Histoire Pei Mei</a>
+                            <a href="genealogie.html">Généalogie</a>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <a class="nav-link" href="#">Grand-Maître Nam Anh <i class="fas fa-chevron-down ml-1"></i></a>
+                        <div class="submenu">
+                            <a href="biographie.html">Biographie</a>
+                            <a href="recits.html">Récits</a>
+                            <a href="interview.html">Interview Télé-Monde</a>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <a class="nav-link" href="#">Enseignement <i class="fas fa-chevron-down ml-1"></i></a>
+                        <div class="submenu">
+                            <a href="style-pei-mei.html">Le Style Pei Mei</a>
+                            <a href="bienfaits.html">Les Bienfaits</a>
+                            <a href="programme.html">Programme</a>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <a class="nav-link" href="#">Philosophie <i class="fas fa-chevron-down ml-1"></i></a>
+                        <div class="submenu">
+                            <a href="voie-kung-fu.html">La Voie du Kung Fu</a>
+                            <a href="trois-philosophies.html">3 Philosophies de Base</a>
+                            <a href="cinq-respects.html">5 Respects</a>
+                            <a href="regle-jade.html">Règle de Jade</a>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <a class="nav-link" href="#">Infos Pratiques <i class="fas fa-chevron-down ml-1"></i></a>
+                        <div class="submenu">
+                            <a href="contact.html">Contact</a>
+                            <a href="questions-reponses.html">Questions-Réponses</a>
+                            <a href="reconnaitre-ecole.html">Reconnaître une Bonne École</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <h3 style="color: var(--red); font-weight: bold;">Menu</h3>
+                <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <a class="mobile-nav-link" href="index.html">Accueil</a>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <div class="mobile-nav-link" onclick="toggleMobileSubmenu('histoire-icon')">
+                    Histoire <i class="fas fa-chevron-down ml-auto" id="histoire-icon"></i>
+                </div>
+                <div class="mobile-submenu" id="histoire-submenu">
+                    <a href="histoire-shaolin.html">Histoire Shaolin</a>
+                    <a href="histoire-pei-mei.html">Histoire Pei Mei</a>
+                    <a href="genealogie.html">Généalogie</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <div class="mobile-nav-link" onclick="toggleMobileSubmenu('grandmaitre-icon')">
+                    Grand-Maître Nam Anh <i class="fas fa-chevron-down ml-auto" id="grandmaitre-icon"></i>
+                </div>
+                <div class="mobile-submenu" id="grandmaitre-submenu">
+                    <a href="biographie.html">Biographie</a>
+                    <a href="recits.html">Récits</a>
+                    <a href="interview.html">Interview Télé-Monde</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <div class="mobile-nav-link" onclick="toggleMobileSubmenu('enseignement-icon')">
+                    Enseignement <i class="fas fa-chevron-down ml-auto" id="enseignement-icon"></i>
+                </div>
+                <div class="mobile-submenu" id="enseignement-submenu">
+                    <a href="style-pei-mei.html">Le Style Pei Mei</a>
+                    <a href="bienfaits.html">Les Bienfaits</a>
+                    <a href="programme.html">Programme</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <div class="mobile-nav-link" onclick="toggleMobileSubmenu('philosophie-icon')">
+                    Philosophie <i class="fas fa-chevron-down ml-auto" id="philosophie-icon"></i>
+                </div>
+                <div class="mobile-submenu" id="philosophie-submenu">
+                    <a href="voie-kung-fu.html">La Voie du Kung Fu</a>
+                    <a href="trois-philosophies.html">3 Philosophies de Base</a>
+                    <a href="cinq-respects.html">5 Respects</a>
+                    <a href="regle-jade.html">Règle de Jade</a>
+                </div>
+            </div>
+            
+            <div class="mobile-nav-item">
+                <div class="mobile-nav-link" onclick="toggleMobileSubmenu('infos-icon')">
+                    Infos Pratiques <i class="fas fa-chevron-down ml-auto" id="infos-icon"></i>
+                </div>
+                <div class="mobile-submenu" id="infos-submenu">
+                    <a href="contact.html">Contact</a>
+                    <a href="questions-reponses.html">Questions-Réponses</a>
+                    <a href="reconnaitre-ecole.html">Reconnaître une Bonne École</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="section-red section-padding">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center mb-12" style="font-size: 2.25rem;">Questions fréquemment posées</h1>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Peut-on commencer en cours d'année ?</h2>
+                    <div class="content-text">
+                        <p>Oui. Les inscriptions sont ouvertes toute l'année.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Les cours sont-ils ouverts aux enfants et aux mineurs ?</h2>
+                    <div class="content-text">
+                        <p>Les cours sont ouverts aux adultes et aux adolescents de plus de 16 ans.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Y a-t-il un âge maximum ou des conditions physiques requises pour commencer ?</h2>
+                    <div class="content-text">
+                        <p class="mb-4">Non.</p>
+                        <p class="mb-4">Il n'est jamais trop tard pour commencer.</p>
+                        <p>L'entraînement est adapté à l'individualité de chacun : l'âge, la souplesse, la langue, les capacités physiques ou intellectuelles ne sont pas un problème mais des données auxquelles chacun doit s'adapter, et particulièrement quand son rôle est d'enseigner un art martial.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Je voudrais me faire une idée mais j'hésite encore...</h2>
+                    <div class="content-text">
+                        <p>Contactez-nous directement ou laissez-nous vos coordonnées pour prendre rendez-vous. Nous vous ferons visiter l'école et vous présenterons personnellement notre art martial.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Le combat est-il une obligation ?</h2>
+                    <div class="content-text">
+                        <p class="mb-4">Non.</p>
+                        <p class="mb-4">Pour ceux qui sont uniquement intéressés par l'aspect santé et/ou esthétique du kung fu, la branche "santé martiale" permet de progresser, même jusqu'au niveau professionnel, sans inclure des pratiques comme le combat ou le cassage de briques par exemple.</p>
+                        <p>Toutefois, l'apprentissage du combat requiert préalablement l'acquisition de certaines postures, de certains réflexes, et la maîtrise de blocages spécifiques que tous les pratiquants devront apprendre.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Faut-il avoir une condition physique particulière ?</h2>
+                    <div class="content-text">
+                        <p class="mb-4">Non, aucune condition physique particulière n'est requise. Le Kung Fu s'adapte à chaque pratiquant, quelles que soient ses capacités.</p>
+                        <p>Les exercices sont progressifs et chacun avance à son rythme. L'important est la régularité de la pratique plutôt que l'intensité initiale.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Combien de temps faut-il pour progresser ?</h2>
+                    <div class="content-text">
+                        <p class="mb-4">La progression dépend de nombreux facteurs : assiduité, régularité de la pratique, capacités individuelles.</p>
+                        <p class="mb-4">Les premiers bénéfices (souplesse, équilibre, détente) se ressentent généralement après quelques semaines de pratique régulière.</p>
+                        <p>Pour l'apprentissage des techniques de base, il faut compter plusieurs mois, et les techniques avancées nécessitent plusieurs années de pratique assidue.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Quelle est la différence avec d'autres arts martiaux ?</h2>
+                    <div class="content-text">
+                        <p class="mb-4">Le Pei Mei se distingue par son approche complète alliant techniques martiales, philosophie, développement énergétique et médecine traditionnelle chinoise.</p>
+                        <p class="mb-4">Contrairement aux arts martiaux sportifs modernes, le Pei Mei conserve la dimension spirituelle et thérapeutique des arts martiaux traditionnels.</p>
+                        <p>Il met l'accent sur le développement de la force interne (Nei Kung) plutôt que sur la force musculaire pure.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Y a-t-il des compétitions ?</h2>
+                    <div class="content-text">
+                        <p class="mb-4">L'école Pei Mei ne participe généralement pas aux compétitions sportives modernes.</p>
+                        <p class="mb-4">L'accent est mis sur le développement personnel, la maîtrise de soi et la progression individuelle plutôt que sur la compétition.</p>
+                        <p>Cependant, des démonstrations et échanges techniques avec d'autres écoles peuvent avoir lieu occasionnellement.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Quelle tenue faut-il porter ?</h2>
+                    <div class="content-text">
+                        <p class="mb-4">Pour débuter, une tenue souple et confortable suffit (jogging, tee-shirt).</p>
+                        <p class="mb-4">Par la suite, il est recommandé de porter l'uniforme traditionnel de l'école (kimono de Kung Fu).</p>
+                        <p>Les chaussures souples ou pieds nus sont préférables selon les exercices pratiqués.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Peut-on pratiquer si l'on a des problèmes de santé ?</h2>
+                    <div class="content-text">
+                        <p class="mb-4">En cas de problèmes de santé, il est recommandé de consulter votre médecin avant de commencer.</p>
+                        <p class="mb-4">Beaucoup de problèmes de santé peuvent bénéficier de la pratique du Kung Fu (stress, problèmes articulaires, troubles du sommeil).</p>
+                        <p>L'enseignement peut être adapté en fonction des limitations individuelles.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Comment se déroule un cours type ?</h2>
+                    <div class="content-text">
+                        <p class="mb-4">Un cours commence généralement par le salut traditionnel et un échauffement.</p>
+                        <p class="mb-4">Suivent les exercices de base : positions, déplacements, techniques de bras et de jambes.</p>
+                        <p class="mb-4">Puis l'apprentissage ou révision des formes (enchaînements codifiés).</p>
+                        <p class="mb-4">Les cours avancés incluent travail avec partenaire, applications martiales et méditation.</p>
+                        <p>Le cours se termine par des étirements et le salut final.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenu) {
+                mobileMenu.classList.toggle('show');
+            }
+        }
+
+        function toggleMobileSubmenu(iconId) {
+            const icon = document.getElementById(iconId);
+            const submenuId = iconId.replace('-icon', '-submenu');
+            const submenu = document.getElementById(submenuId);
+            
+            if (icon && submenu) {
+                const isVisible = submenu.style.display === 'block';
+                
+                if (isVisible) {
+                    submenu.style.display = 'none';
+                    icon.classList.remove('active');
+                } else {
+                    // Close all other submenus
+                    const allSubmenus = document.querySelectorAll('[id$="-submenu"]');
+                    const allIcons = document.querySelectorAll('[id$="-icon"]');
+                    
+                    allSubmenus.forEach(sub => sub.style.display = 'none');
+                    allIcons.forEach(ic => ic.classList.remove('active'));
+                    
+                    submenu.style.display = 'block';
+                    icon.classList.add('active');
+                }
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            
+            if (mobileMenu && !mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                mobileMenu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDsNg7h1yvnzg4K1ip%2FWCLEPRfEpFuEtNlioHNLYb2H%2BqXPXor9AXABADoSjSuJYHv2DQMU8Qbo1KA1xtxFYd7VLlJa6NDM31AIalxI2SU1hPQk0hTq%2FyfudmPtYzrn1Oqowhjon64LbIuOIIExkR3HcA8z%2BWgywPWXQqS4xyAVFDXZqoEj5VXEq1%2FMVM974tGN%2FG9Cgq%2FV7pId8TF0zzpznjZotyPz7bH1FkVmXDbTSYwrVyHBWr%2FjqQR6x14YqxemuZV%2BhnGwWOKEnHXnUfBasTBxWgegUSIPaF1Myj0bdZwSBO0gmZcaD2NJo4WTwKHDQLompywvweqDw5%2BEktHc6Dzt%2Fj0mJXgngR%2BWFqEemQtesbJS%2FR0XHbRq%2F7N4SHqu9GCy%2FnNI9AhIDJb%2Bm5I6RTAh8%2BjWdf1cGufvf0HS%2BtYleRv6%2BohBKI0B%2FYaEqHBmKh13aMPSugRnOycOwAU929tLOGRAL6YN6ORvYXqSH5T2yu2PZ%2BnoutsHuilBAh4A%3D%3D";
+        window.__genspark_locale = "fr-FR";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDsNg7h1yvnzg4K1ip/WCLEPRfEpFuEtNlioHNLYb2H+qXPXor9AXABADoSjSuJYHv2DQMU8Qbo1KA1xtxFYd7VLlJa6NDM31AIalxI2SU1hPQk0hTq/yfudmPtYzrn1Oqowhjon64LbIuOIIExkR3HcA8z+WgywPWXQqS4xyAVFDXZqoEj5VXEq1/MVM974tGN/G9Cgq/V7pId8TF0zzpznjZotyPz7bH1FkVmXDbTSYwrVyHBWr/jqQR6x14YqxemuZV+hnGwWOKEnHXnUfBasTBxWgegUSIPaF1Myj0bdZwSBO0gmZcaD2NJo4WTwKHDQLompywvweqDw5+EktHc6Dzt/j0mJXgngR+WFqEemQtesbJS/R0XHbRq/7N4SHqu9GCy/nNI9AhIDJb+m5I6RTAh8+jWdf1cGufvf0HS+tYleRv6+ohBKI0B/YaEqHBmKh13aMPSugRnOycOwAU929tLOGRAL6YN6ORvYXqSH5T2yu2PZ+noutsHuilBAh4A==";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

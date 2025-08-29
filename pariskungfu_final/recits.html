@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Récits du Grand-Maître - Paris Kung Fu</title>
+    <meta name="description" content="Récits du Grand-Maître Nam Anh - Le dernier défi de Tang Hue Bac contre Li Wing Sing à l'Auberge de l'Asie">
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --cream: #FAF8F3;
+            --beige-medium: #E8DCC0;
+            --red: #8B0000;
+            --dark-red: #660000;
+            --blue-grey: #2C3E50;
+            --blue-grey-medium: #34495E;
+            --grey-soft: #6C7B7F;
+            --cream-white: #FEFEFE;
+            --beige-warm: #F0E8D0;
+            --grey-light: #ECF0F1;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: var(--blue-grey);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--beige-warm) 100%);
+        }
+
+        .section-cream {
+            background-color: var(--cream);
+        }
+
+        .section-red {
+            background-color: var(--red);
+            color: white;
+        }
+
+        .section-red h1, .section-red h2, .section-red h3, .section-red h4 {
+            color: white;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        .content-text {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.1rem;
+        }
+
+        .menu-item {
+            position: relative;
+            display: inline-block;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            min-width: 200px;
+            z-index: 1000;
+        }
+
+        .menu-item:hover .submenu {
+            display: block;
+        }
+
+        .submenu a {
+            display: block;
+            padding: 12px 20px;
+            color: var(--blue-grey);
+            text-decoration: none;
+            border-bottom: 1px solid var(--grey-light);
+        }
+
+        .submenu a:hover {
+            background-color: var(--cream);
+            color: var(--red);
+        }
+
+        .submenu a:last-child {
+            border-bottom: none;
+        }
+
+        .nav-link {
+            color: var(--red);
+            font-weight: 600;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: var(--cream);
+            color: var(--dark-red);
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--red);
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.8);
+            z-index: 999;
+        }
+
+        .mobile-menu.show {
+            display: block !important;
+        }
+
+        .mobile-menu-content {
+            background: white;
+            width: 280px;
+            height: 100%;
+            padding: 20px 0;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--red);
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            color: var(--red);
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .mobile-nav-link:hover {
+            background-color: var(--cream);
+        }
+
+        .mobile-submenu {
+            display: none;
+            background-color: var(--cream-white);
+        }
+
+        .mobile-submenu.active {
+            display: block;
+        }
+
+        .mobile-submenu a {
+            display: block;
+            padding: 12px 40px;
+            color: var(--grey-soft);
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .mobile-submenu a:hover {
+            background-color: var(--cream);
+            color: var(--red);
+        }
+
+        @media (max-width: 768px) {
+            .desktop-menu {
+                display: none !important;
+            }
+            
+            .mobile-menu-button {
+                display: block !important;
+            }
+            
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+        }
+
+        .image-caption {
+            font-family: 'Crimson Text', serif;
+            font-size: 0.95rem;
+            font-style: italic;
+            color: var(--red);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold" style="color: var(--red);">
+                    École Pei Mei Orthodoxe
+                </div>
+
+                <!-- Menu hamburger button (mobile only) -->
+                <button class="mobile-menu-button" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Desktop Menu -->
+                <div class="desktop-menu hidden md:flex space-x-1">
+                    <div class="menu-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <a class="nav-link" href="#">Histoire <i class="fas fa-chevron-down ml-1"></i></a>
+                        <div class="submenu">
+                            <a href="histoire-shaolin.html">Histoire Shaolin</a>
+                            <a href="histoire-pei-mei.html">Histoire Pei Mei</a>
+                            <a href="genealogie.html">Généalogie</a>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <a class="nav-link" href="#">Grand-Maître Nam Anh <i class="fas fa-chevron-down ml-1"></i></a>
+                        <div class="submenu">
+                            <a href="biographie.html">Biographie</a>
+                            <a href="recits.html">Récits</a>
+                            <a href="interview.html">Interview Télé-Monde</a>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <a class="nav-link" href="#">Enseignement <i class="fas fa-chevron-down ml-1"></i></a>
+                        <div class="submenu">
+                            <a href="style-pei-mei.html">Le Style Pei Mei</a>
+                            <a href="bienfaits.html">Les Bienfaits</a>
+                            <a href="programme.html">Programme</a>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <a class="nav-link" href="#">Philosophie <i class="fas fa-chevron-down ml-1"></i></a>
+                        <div class="submenu">
+                            <a href="voie-kung-fu.html">La Voie du Kung Fu</a>
+                            <a href="philosophies-base.html">3 Philosophies de Base</a>
+                            <a href="cinq-respects.html">5 Respects</a>
+                            <a href="regle-jade.html">Règle de Jade</a>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <a class="nav-link" href="#">Infos Pratiques <i class="fas fa-chevron-down ml-1"></i></a>
+                        <div class="submenu">
+                            <a href="contact.html">Contact</a>
+                            <a href="questions-reponses.html">Questions-Réponses</a>
+                            <a href="reconnaitre-ecole.html">Reconnaître une Bonne École</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <div class="flex justify-between items-center p-5 border-b-2" style="border-color: var(--cream);">
+                <h3 style="color: var(--red); font-weight: bold;">Menu</h3>
+                <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="border-b" style="border-color: var(--grey-light);">
+                <a class="mobile-nav-link" href="index.html">Accueil</a>
+            </div>
+
+            <div class="border-b" style="border-color: var(--grey-light);">
+                <div class="mobile-nav-link" onclick="toggleSubmenu('histoire')">
+                    Histoire <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="mobile-submenu" id="histoire-submenu">
+                    <a href="histoire-shaolin.html">Histoire Shaolin</a>
+                    <a href="histoire-pei-mei.html">Histoire Pei Mei</a>
+                    <a href="genealogie.html">Généalogie</a>
+                </div>
+            </div>
+
+            <div class="border-b" style="border-color: var(--grey-light);">
+                <div class="mobile-nav-link" onclick="toggleSubmenu('grandmaitre')">
+                    Grand-Maître Nam Anh <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="mobile-submenu" id="grandmaitre-submenu">
+                    <a href="biographie.html">Biographie</a>
+                    <a href="recits.html">Récits</a>
+                    <a href="interview.html">Interview Télé-Monde</a>
+                </div>
+            </div>
+
+            <div class="border-b" style="border-color: var(--grey-light);">
+                <div class="mobile-nav-link" onclick="toggleSubmenu('enseignement')">
+                    Enseignement <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="mobile-submenu" id="enseignement-submenu">
+                    <a href="style-pei-mei.html">Le Style Pei Mei</a>
+                    <a href="bienfaits.html">Les Bienfaits</a>
+                    <a href="programme.html">Programme</a>
+                </div>
+            </div>
+
+            <div class="border-b" style="border-color: var(--grey-light);">
+                <div class="mobile-nav-link" onclick="toggleSubmenu('philosophie')">
+                    Philosophie <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="mobile-submenu" id="philosophie-submenu">
+                    <a href="voie-kung-fu.html">La Voie du Kung Fu</a>
+                    <a href="philosophies-base.html">3 Philosophies de Base</a>
+                    <a href="cinq-respects.html">5 Respects</a>
+                    <a href="regle-jade.html">Règle de Jade</a>
+                </div>
+            </div>
+
+            <div class="border-b" style="border-color: var(--grey-light);">
+                <div class="mobile-nav-link" onclick="toggleSubmenu('infos')">
+                    Infos Pratiques <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="mobile-submenu" id="infos-submenu">
+                    <a href="contact.html">Contact</a>
+                    <a href="questions-reponses.html">Questions-Réponses</a>
+                    <a href="reconnaitre-ecole.html">Reconnaître une Bonne École</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenu Principal -->
+    <section class="section-cream section-padding">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center mb-12" style="color: var(--red);">Récits du Grand-Maître Nam Anh</h1>
+            
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-6" style="color: var(--red);">Le dernier défi</h2>
+                
+                <div class="content-text mb-8">
+                    <p class="mb-4">Le Grand-Maître Tang Hue Bac s'était forgé par ses exploits une très grande réputation. L'envie de se mesurer à lui n'avait d'ailleurs jamais manqué à certains téméraires qui, invariablement, s'étaient vus ramenés à la triste réalité de leur infériorité. Mais à force de combats toujours remportés, le Grand-Maître ne trouvait plus de champion à sa hauteur et finit par se sentir prisonnier de cette suprématie, bridé dans son cheminement sur la voie des Arts Martiaux. Il se résolut donc à trouver de nouveaux adversaires.</p>
+                    
+                    <p class="mb-4">Sa dernière confrontation le mit aux prises avec un maître renommé d'une école de la branche Shaolin. Nommé Li Wing Sing, ce dernier devait pratiquer le Mok Gar ou le Hung Gar. Il avait fait le voyage de Hong Kong à Cholon dans l'unique but de rencontrer le Grand-Maître Tang Hue Bac. Il venait avec la ferme intention de le battre.</p>
+                    
+                    <p class="mb-4">Dès que la nouvelle fut connue, elle mit Cholon en ébullition, ce quartier de Saigon devenu le fief du Grand-Maître. Dans les rues, sur les marchés ou dans la moindre auberge, il ne fut bientôt plus question que de cette éventuelle confrontation à laquelle chacun se promettait d'assister, ou du moins l'espérait. Chaque matin, dans les cafés, on lançait des paris sur l'issue de cette rencontre au sommet.</p>
+                    
+                    <p class="mb-4">La police, à son habitude, laissait couler, soucieuse de neutralité dans les affaires chinoises.</p>
+                </div>
+
+                <h3 class="text-2xl font-bold mb-4" style="color: var(--red);">Phase d'observation</h3>
+                
+                <div class="content-text mb-8">
+                    <p class="mb-4">Pour l'heure, il n'était pas question de se battre. Pas tout de suite. Car l'affrontement ne pouvait se passer de manœuvres préliminaires sans lesquelles cet événement Martial eût été ramené au rang d'un vulgaire règlement de comptes entre mafieux. La règle voulait que l'on cherchât d'abord à déterminer la valeur de l'adversaire. Pour éviter, d'une part, le déshonneur de se mesurer à quelqu'un de bien plus faible. Pour faire l'économie, d'autre part, d'un combat dont l'issue mortelle était prévisible pour l'un des deux avant même que la confrontation n'eût commencé. Ainsi, bien des défis se soldaient-ils dès le stade des démonstrations.</p>
+                    
+                    <p class="mb-4">Un jour et une heure furent bientôt fixés : la phase d'observation aurait lieu à l'Auberge de l'Asie, au cœur même de Cholon.</p>
+                    
+                    <p class="mb-4">Le jour dit, le Grand-Maître Tang Hue Bac, entouré de ses disciples les plus avancés et de quantité d'autres gens, reçut le candidat à l'auberge de l'Asie, qui était un bâtiment moderne à la solidité prouvée. Li Wing Sing s'avança jusqu'au milieu de la pièce principale dont le sol était recouvert de carrelage. Il lui incombait de démontrer le premier sa valeur. Et tous attendaient de voir ce dont il était capable.</p>
+                    
+                    <p class="mb-4">Li Wing Sing fléchit alors les genoux et se mit dans la position du cavalier. L'assistance put remarquer que ce seul mouvement avait cassé net les dalles qui se trouvaient sous lui et projeté quelques éclats.</p>
+                    
+                    <p class="mb-4">Aussitôt, un disciple du Grand-Maître Tang Hue Bac, du nom de Wong Siu Lung, sortit du rang pour donner la réplique. Il remarqua dans un coin de la pièce un canapé, fait d'un bois très sec et très dur. Il s'en approcha puis s'assit brutalement. Le siège robuste s'effondra, brisé en plusieurs morceaux.</p>
+                    
+                    <p class="mb-4">C'était de nouveau le tour de Ling Wing Sing. Son choix se porta sur l'un des mur de la salle. Un mur imposant, haut de 3 mètres et d'une épaisseur avoisinant le demi-mètre. Le maître planta avec hargne ses griffes dans la maçonnerie. D'une seule main, il arracha le plâtre et avec, l'une des briques.</p>
+                </div>
+
+                <h3 class="text-2xl font-bold mb-4" style="color: var(--red);">Issue fatale</h3>
+                
+                <div class="content-text mb-8">
+                    <p class="mb-4">C'est alors que le Grand-Maître Tang Hue Bac décida de répliquer lui-même, indiquant en cela qu'il considérait Ling Wing Sing comme un véritable Grand-Maître. D'un coup sec, le champion de Cholon abattit intégralement le pan de mur auquel une brique venait d'être retirée.</p>
+                    
+                    <p class="mb-4">Un grand murmure se fit dans l'assistance. Chacun pressentait que l'affrontement, s'il devait avoir lieu, serait un combat à mort. Certains firent valoir qu'on avait affaire à deux talents purs. L'issue, quelle qu'elle fût, serait une perte pour les Arts Martiaux. Dès lors, pourquoi ne pas s'allier ?</p>
+                    
+                    <p class="mb-4">Le Grand-Maître Tang Hue Bac prit alors la parole pour souhaiter bienvenue à Cholon à Ling Wing Sing.</p>
+                    
+                    <p class="mb-4">Ainsi acceptait-il de céder une partie du terrain pour ouvrir les portes de son École à ce dernier.</p>
+                    
+                    <p class="mb-4">Mais Ling Wing Sing mentit à ses promesses et développa assez peu l'École. Peut-être, d'ailleurs, ne se fit-il jamais vraiment une place parce qu'il n'avait pas combattu le Grand-Maître Tang Hue Bac.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('show');
+        }
+
+        function toggleSubmenu(submenuId) {
+            const submenu = document.getElementById(submenuId + '-submenu');
+            const allSubmenus = document.querySelectorAll('.mobile-submenu');
+            
+            // Fermer tous les autres sous-menus
+            allSubmenus.forEach(menu => {
+                if (menu.id !== submenuId + '-submenu') {
+                    menu.classList.remove('active');
+                }
+            });
+            
+            // Toggle le sous-menu cliqué
+            submenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDqba7o%2BAuE%2BNP4MmyI3wJuWKYRQ3d3JOBE6p1lKDPPHS%2B7ax2PLGckwj5tSBM5wXxfpL4uegEJQgCld30%2F5ZMcINzNCEdVvOe2UUewQpgm%2Bu4%2BkLSbscW%2FsuyI4pWLBo%2BD0McexICivXcnDuL0KH%2FxjJwIKBL6NiQf%2BRHUha%2FfDD5jk%2BH9WoI9LaoEon9RVPJj3aROXHN92drNso1btHloQ0PNj7vg7FfozqaGf8xGGaU7NoxAfnKiMP2krYS36fWzcG%2FUlTg7AjCJJyDQiFL2SEmPtEsc7UBqrtG0C4I1LOcvzxyPZI0Prqw1SUHWeyvv%2BRSWtS%2FXd6x7uOpueoz5eN%2F2OHx9rBldGbm7gcgSD0lIFcSiLMGODwCWwvlanfTA0Mupeq1AjqUF7OfApF9amBMHhDbL1zueyc5sUUJdMA3GBHBEmpRPyMTqUOoA13Q71EP4VbfbSvYm2lKshopB07B0JhAccuurLCoB7FsOuL";
+        window.__genspark_locale = "fr-FR";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDqba7o+AuE+NP4MmyI3wJuWKYRQ3d3JOBE6p1lKDPPHS+7ax2PLGckwj5tSBM5wXxfpL4uegEJQgCld30/5ZMcINzNCEdVvOe2UUewQpgm+u4+kLSbscW/suyI4pWLBo+D0McexICivXcnDuL0KH/xjJwIKBL6NiQf+RHUha/fDD5jk+H9WoI9LaoEon9RVPJj3aROXHN92drNso1btHloQ0PNj7vg7FfozqaGf8xGGaU7NoxAfnKiMP2krYS36fWzcG/UlTg7AjCJJyDQiFL2SEmPtEsc7UBqrtG0C4I1LOcvzxyPZI0Prqw1SUHWeyvv+RSWtS/Xd6x7uOpueoz5eN/2OHx9rBldGbm7gcgSD0lIFcSiLMGODwCWwvlanfTA0Mupeq1AjqUF7OfApF9amBMHhDbL1zueyc5sUUJdMA3GBHBEmpRPyMTqUOoA13Q71EP4VbfbSvYm2lKshopB07B0JhAccuurLCoB7FsOuL";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    

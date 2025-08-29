@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Règle de Jade - École Pei Mei Paris</title>
+    <meta name="description" content="Code moral traditionnel de l'École Pei Mei - Règles de conduite, principes éthiques et valeurs de l'école d'arts martiaux">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --cream: #FAF8F3;
+            --beige-medium: #E8DCC0;
+            --red: #8B0000;
+            --dark-red: #660000;
+            --blue-grey: #2C3E50;
+            --blue-grey-medium: #34495E;
+            --grey-soft: #6C7B7F;
+            --cream-white: #FEFEFE;
+            --beige-warm: #F0E8D0;
+            --grey-light: #ECF0F1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: var(--blue-grey);
+            background-color: var(--cream);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--red);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: var(--red);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: var(--cream);
+            border-radius: 5px;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            min-width: 220px;
+            z-index: 1000;
+        }
+
+        .nav-item:hover .submenu {
+            display: block;
+        }
+
+        .submenu a {
+            display: block;
+            padding: 12px 20px;
+            color: var(--blue-grey);
+            text-decoration: none;
+            border-bottom: 1px solid var(--grey-light);
+            font-weight: 400;
+        }
+
+        .submenu a:hover {
+            background-color: var(--cream);
+            color: var(--red);
+        }
+
+        .submenu a:last-child {
+            border-bottom: none;
+        }
+
+        /* Header Section */
+        .header-section {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--beige-warm) 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--red);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.3rem;
+            color: var(--blue-grey);
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intro-text {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--blue-grey);
+            line-height: 1.8;
+        }
+
+        /* Rule Cards */
+        .rules-container {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .rule-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--red);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .rule-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .rule-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--red);
+            margin-bottom: 1rem;
+        }
+
+        .rule-text {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--blue-grey);
+        }
+
+        /* Author Section */
+        .author-section {
+            background: var(--blue-grey);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .author-text {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--blue-grey-medium);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .page-title {
+                font-size: 2.2rem;
+            }
+
+            .page-subtitle {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+
+            .rule-card {
+                padding: 1.5rem;
+            }
+
+            .rule-number {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-section {
+                padding: 2rem 0;
+            }
+
+            .content-section {
+                padding: 2rem 0;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Print Optimization */
+         {
+            .navbar, .footer {
+                display: none;
+            }
+            
+            .rule-card {
+                break-inside: avoid;
+                margin-bottom: 1rem;
+            }
+            
+            body {
+                background: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">École Pei Mei Orthodoxe</div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Histoire <i class="fas fa-chevron-down"></i></a>
+                        <div class="submenu">
+                            <a href="histoire-shaolin.html">Histoire Shaolin</a>
+                            <a href="histoire-pei-mei.html">Histoire Pei Mei</a>
+                            <a href="genealogie.html">Généalogie</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Grand-Maître Nam Anh <i class="fas fa-chevron-down"></i></a>
+                        <div class="submenu">
+                            <a href="biographie.html">Biographie</a>
+                            <a href="recits.html">Récits</a>
+                            <a href="interview.html">Interview Télé-Monde</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Enseignement <i class="fas fa-chevron-down"></i></a>
+                        <div class="submenu">
+                            <a href="style-pei-mei.html">Le Style Pei Mei</a>
+                            <a href="bienfaits.html">Les Bienfaits</a>
+                            <a href="programme.html">Programme</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Philosophie <i class="fas fa-chevron-down"></i></a>
+                        <div class="submenu">
+                            <a href="voie-kung-fu.html">La Voie du Kung Fu</a>
+                            <a href="trois-philosophies.html">3 Philosophies de Base</a>
+                            <a href="cinq-respects.html">5 Respects</a>
+                            <a href="regle-jade.html">Règle de Jade</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Infos Pratiques <i class="fas fa-chevron-down"></i></a>
+                        <div class="submenu">
+                            <a href="contact.html">Contact</a>
+                            <a href="questions-reponses.html">Questions-Réponses</a>
+                            <a href="reconnaitre-ecole.html">Reconnaître une Bonne École</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="header-section">
+        <div class="container">
+            <h1 class="page-title">La Règle de Jade</h1>
+            <p class="page-subtitle">Code moral traditionnel de l'École Pei Mei Orthodoxe</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <p class="intro-text">
+                    Cette règle constitue le mode de pensée propre à notre école. Elle a été rédigée par le Grand-Maître Nam Anh et reflète sa pensée, sa philosophie. Elle guide les pratiquants dans leur cheminement martial et spirituel, établissant les principes éthiques et les valeurs fondamentales de l'École Pei Mei Orthodoxe.
+                </p>
+
+                <div class="rules-container">
+                    <div class="rule-card">
+                        <div class="rule-number">1</div>
+                        <p class="rule-text">
+                            Comprendre l'essence de la vie et de la mort et vivre en conformité avec les lois naturelles qui en découlent par le culte indispensable de la valeur individuelle et de la personnalité Vraie de l'être humain.
+                        </p>
+                    </div>
+
+                    <div class="rule-card">
+                        <div class="rule-number">2</div>
+                        <p class="rule-text">
+                            Vénérer la primauté de la Grande Voie et entre autres, respecter et reconnaître l'autorité des grands-maîtres et des enseignants.
+                        </p>
+                    </div>
+
+                    <div class="rule-card">
+                        <div class="rule-number">3</div>
+                        <p class="rule-text">
+                            Promouvoir activement notre philosophie et la belle science des arts martiaux par la Voie Royale, empreinte d'humanité et de tolérance, dans le respect du patrimoine culturel oriental.
+                        </p>
+                    </div>
+
+                    <div class="rule-card">
+                        <div class="rule-number">4</div>
+                        <p class="rule-text">
+                            Garder l'esprit ouvert à la recherche et à la considération d'autres dimensions éthiques, scientifiques et philosophiques.
+                        </p>
+                    </div>
+
+                    <div class="rule-card">
+                        <div class="rule-number">5</div>
+                        <p class="rule-text">
+                            Cultiver intensément les sentiments nobles d'amour, de fraternité et de solidarité dans une communion parfaite émanant de soi.
+                        </p>
+                    </div>
+
+                    <div class="rule-card">
+                        <div class="rule-number">6</div>
+                        <p class="rule-text">
+                            Entrevoir un long cheminement, donc savoir préparer l'esprit par la loyauté, et le corps par la persévérance.
+                        </p>
+                    </div>
+
+                    <div class="rule-card">
+                        <div class="rule-number">7</div>
+                        <p class="rule-text">
+                            Lutter contre toute cause de déséquilibre de l'ordre naturel et contre toute atteinte à notre discipline philosophique en se gardant d'égocentrisme, de jalousie et de toute discrimination, notamment celles fondées sur la race, le sexe ou la religion.
+                        </p>
+                    </div>
+
+                    <div class="rule-card">
+                        <div class="rule-number">8</div>
+                        <p class="rule-text">
+                            Éduquer et redresser les autres en tenant compte de leur nature et de leur intelligence.
+                        </p>
+                    </div>
+
+                    <div class="rule-card">
+                        <div class="rule-number">9</div>
+                        <p class="rule-text">
+                            Vivre dans l'harmonie du ciel et de la terre par la connaissance de la vie et de la mort dans le respect du karma de tous et chacun.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author Section -->
+    <section class="author-section">
+        <div class="container">
+            <p class="author-text">
+                "Ces neuf préceptes constituent l'essence de notre enseignement. Ils ne sont pas seulement des règles à suivre, mais une voie de transformation personnelle qui guide le pratiquant vers l'accomplissement de sa véritable nature."<br><br>
+                <strong>— Grand-Maître Nam Anh, 7ème génération de l'École Pei Mei</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                © 2024 École Pei Mei Orthodoxe Nam Anh Kung Fu - Paris | 
+                <a href="mailto:contact@pariskungfu.com" style="color: white;">contact@pariskungfu.com</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDj%2BSPBlcIdv9TQQsV6EFnjMoN1N5p5kky0PftXY9QPZxKQtz%2BfJ1u%2B%2FS1bCXDy6h78WHFQnFjS7XiXvaASG987BNglZs9VMDfOb6C63icYCsRGZBTYEU8wdhmeyfoNGYkAtYIU4Ziu1JwMNbhOn%2BGVbQwaZXLReMOW34ooT2UMcoywwUPBxzjCkXZG4QgAkChXKjfXNP9yekxyT%2FrJqhvmo%2BhjFoLfKWecGX3vTsG769tK%2BWX68WE7IW0RxXyE3VnHdGONp9R6tEYnE1tDkgKryCcQllMMzXvBEGT3DtuVvU%2BmMzpqaAkuVZ70glf0hQ79mS%2FpCj3a7Hhzgd1nwNZS3vScmylaHVR9qFKhcs0eB2iaIar7x7deTpWU0fQdOdtCKtvpHNSGWK%2FdW8J8XPgVV7VBeGoXMPHcLU7jUCx%2BOjuSm6P4OLjrTCS7gK9Gkl5B0qkWdB473ZIoczFaSVIB4XHUBu90OK3OB0X0U9rXpbN7S7A%2Bj099B%2BNupv60Kg1Q%3D%3D";
+        window.__genspark_locale = "fr-FR";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDj+SPBlcIdv9TQQsV6EFnjMoN1N5p5kky0PftXY9QPZxKQtz+fJ1u+/S1bCXDy6h78WHFQnFjS7XiXvaASG987BNglZs9VMDfOb6C63icYCsRGZBTYEU8wdhmeyfoNGYkAtYIU4Ziu1JwMNbhOn+GVbQwaZXLReMOW34ooT2UMcoywwUPBxzjCkXZG4QgAkChXKjfXNP9yekxyT/rJqhvmo+hjFoLfKWecGX3vTsG769tK+WX68WE7IW0RxXyE3VnHdGONp9R6tEYnE1tDkgKryCcQllMMzXvBEGT3DtuVvU+mMzpqaAkuVZ70glf0hQ79mS/pCj3a7Hhzgd1nwNZS3vScmylaHVR9qFKhcs0eB2iaIar7x7deTpWU0fQdOdtCKtvpHNSGWK/dW8J8XPgVV7VBeGoXMPHcLU7jUCx+OjuSm6P4OLjrTCS7gK9Gkl5B0qkWdB473ZIoczFaSVIB4XHUBu90OK3OB0X0U9rXpbN7S7A+j099B+Nupv60Kg1Q==";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
