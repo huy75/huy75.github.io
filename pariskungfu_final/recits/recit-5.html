@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L’habit ne fait pas le moine - Paris Kung Fu</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #2C3E50;
+            background-color: #FEFEFE;
+        }
+
+        .page-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 0;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #FAF8F3 0%, #E8DCC0 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .main-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #A0522D;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #6C7B7F;
+            font-style: italic;
+        }
+
+        .story-content {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .story-body {
+            margin-bottom: 60px;
+        }
+
+        .story-title, .chapter-title, .section-title {
+            color: #A0522D;
+            margin: 40px 0 20px 0;
+            font-family: 'Georgia', serif;
+        }
+
+        .story-title {
+            font-size: 2.5rem;
+            border-bottom: 3px solid #A0522D;
+            padding-bottom: 15px;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-top: 50px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-top: 35px;
+        }
+
+        .story-paragraph {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 1.9;
+        }
+
+        .story-paragraph:first-letter {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #A0522D;
+        }
+
+        .navigation-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-top: 2px solid #E8DCC0;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #A0522D;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #8B4513;
+        }
+
+        .site-footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .story-paragraph {
+                font-size: 1.1rem;
+            }
+
+            .navigation-section {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="page-container">
+        <nav class="bg-white shadow-lg sticky top-0 z-50"><div class="container mx-auto px-4"><div class="flex justify-between items-center py-4"><div class="text-2xl font-bold" style="color: var(--red);"> École Pei Mei Orthodoxe </div><!-- Menu hamburger button (mobile only) --><button class="mobile-menu-button" id="mobileMenuButton" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button><!-- Desktop Menu --><div class="desktop-menu hidden md:flex space-x-1"><div class="menu-item"><a class="nav-link" href="index.html">Accueil</a></div><div class="menu-item"><a class="nav-link" href="#">Histoire <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="histoire-shaolin.html">Histoire Shaolin</a><a href="histoire-pei-mei.html">Histoire Pei Mei</a><a href="genealogie.html">Généalogie</a></div></div><div class="menu-item"><a class="nav-link" href="#">Grand-Maître Nam Anh <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="biographie.html">Biographie</a><a href="recits.html">Récits</a><a href="interview.html">Interview Télé-Monde</a></div></div><div class="menu-item"><a class="nav-link" href="#">Enseignement <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="style-pei-mei.html">Le Style Pei Mei</a><a href="bienfaits.html">Les Bienfaits</a><a href="programme.html">Programme</a></div></div><div class="menu-item"><a class="nav-link" href="#">Philosophie <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="voie-kung-fu.html">La Voie du Kung Fu</a><a href="philosophies-base.html">3 Philosophies de Base</a><a href="cinq-respects.html">5 Respects</a><a href="regle-jade.html">Règle de Jade</a></div></div><div class="menu-item"><a class="nav-link" href="#">Infos Pratiques <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="contact.html">Contact</a><a href="questions-reponses.html">Questions-Réponses</a><a href="reconnaitre-ecole.html">Reconnaître une Bonne École</a></div></div></div></div></div></nav>
+
+        <main class="main-content">
+
+            <section class="hero-section">
+                <div class="hero-content">
+                    
+                    <div class="subtitle-section">
+                        <p class="hero-subtitle">Histoire authentique transmise par Maître Nam Anh</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="story-content">
+                <div class="content-wrapper">
+                    <div class="story-body">
+
+<!-- Navigation -->
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+<div class="content-section">
+
+</div>
+</div>
+<!-- Hero Section -->
+<section class="hero-section text-blue-grey">
+<div class="content-section">
+<div class="mb-8">
+<img src="https://raw.githubusercontent.com/huy75/huy75.github.io/main/img/lhabit_moine.jpg" 
+               alt="Illustration pour recit-5" 
+               class="rounded-lg shadow-lg mx-auto" 
+               style="max-width: 100%; height: auto; max-height: 400px; object-fit: cover;">
+</div><p class="story-paragraph">École Pei Mei Orthodoxe - Art martial traditionnel chinois</p><p class="story-paragraph">L'art du combat selon les préceptes de l'École Pei Mei Orthodoxe</p>
+<h1 class="story-title">L’habit ne fait pas le moine</h1>
+<p class="story-paragraph">
+                Récit du Grand Maître Nam Anh
+            </p>
+</div>
+</section>
+<!-- Story Content -->
+<section class="py-16 section-cream">
+<div class="content-section">
+<div class="story-content">
+<div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+<div class="text-content text-blue-grey"> <p class="story-paragraph">Pour la plupart d’entre nous, les vêtements nous protègent du froid et du vent ; ils maintiennent notre chaleur humaine et préservent notre identité culturelle… Pour les riches, c’est différent : les vêtements leur donnent une apparence adéquate et confirment leur réussite, et dans ce cas, les vêtements font l’homme.</p>
+<p class="story-paragraph">Dans le domaine des arts martiaux traditionnels, et particulièrement dans le Kung Fu, les vêtements ou l’uniforme indiquent sans ambiguïté l’accomplissement du pratiquant. Ainsi, l’uniforme noir reflète l’apprentissage sincère et profond réalisé tout au long du Chemin. C’est par cette compréhension que Celui qui porte l’uniforme noir partage et transmet aux générations futures son savoir et son expérience, commande le respect et mérite le titre de « Maître » ou « Protecteur de la Voie ».</p>
+<p class="story-paragraph">Depuis des temps immémoriaux, l’uniforme porté par les Maîtres de Kung Fu est considéré comme sacré car il représente les grandes qualités morales unanimement admirées et recherchées à la fois dans les Arts Martiaux et dans la société contemporaine : fidélité, loyauté, solidarité, courage, humanisme, et plus important encore, une gratitude inébranlable envers les Anciens, les Maîtres, et tous ceux qui nous enseignent, nous guident, et finalement tous ceux qui contribuent à notre bien-être.</p>
+<p class="story-paragraph">Évidemment, la véritable valeur d’une personne ne peut être déterminée par des prétentions personnelles. La vraie valeur provient plutôt des œuvres, des accomplissements et des bonnes actions acceptées et reconnues par la société. À la lumière de cette affirmation, l’uniforme et la ceinture dans les écoles traditionnelles sont toujours accordés à la discrétion du Maître, comme une reconnaissance indubitable des compétences et des qualités requises, marquant l’espace et le temps dans l’entraînement du disciple.</p>
+<p class="story-paragraph">Sans exception, s’attribuer un tel statut est en réalité une forme de trahison envers soi-même. Que ce soit par usurpation du titre ou par le port illicite de l’uniforme noir du Maître, s’accorder soi-même ce rang sacré témoignerait d’un manque de connaissance et d’intelligence de la part de celui qui, dans l’illusion d’une importance personnelle exagérée, déciderait soudainement de violer le code d’honneur des Anciens.</p>
+<p class="story-paragraph">Car ce ne sont pas les vêtements qui font l’homme, pas plus que l’uniforme noir ne fait de quelqu’un un Maître !!!</p>
+<p class="story-paragraph">Grand Maître Nam Anh, 2013</p>
+</div>
+</div>
+<!-- Navigation -->
+<div class="mt-12 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+<a class="bg-blue-grey hover:bg-blue-grey-medium text-white px-6 py-3 rounded-lg transition-colors inline-flex items-center" href="recits.html">
+<i class="fas fa-arrow-left mr-2"></i> Retour aux récits
+                    </a>
+<a class="bg-red hover:bg-dark-red text-white px-6 py-3 rounded-lg transition-colors inline-flex items-center" href="recit-4.html">
+<i class="fas fa-arrow-left mr-2"></i> Récit précédent
+                    </a>
+<a class="bg-red hover:bg-dark-red text-white px-6 py-3 rounded-lg transition-colors inline-flex items-center" href="recit-6.html">
+                        Récit suivant <i class="fas fa-arrow-right ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+
+<!-- JavaScript -->
+<script>
+        // Menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('-translate-x-full');
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+
+        // Fermer le menu mobile quand on clique en dehors
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('-translate-x-full');
+
+        // Sous-menus mobiles
+        function toggleMobileSubmenu(menuId) {
+            const submenu = document.getElementById(menuId + '-submenu');
+            const chevron = event.target.querySelector('i');
+
+            if (submenu.classList.contains('hidden')) {
+                submenu.classList.remove('hidden');
+                chevron.classList.remove('fa-chevron-down');
+                chevron.classList.add('fa-chevron-up');
+                submenu.classList.add('hidden');
+                chevron.classList.remove('fa-chevron-up');
+                chevron.classList.add('fa-chevron-down');
+    </script>
+<script>
+    function toggleMobileMenu(){
+      const mobileMenu=document.querySelector('.mobile-menu');
+      if(mobileMenu){
+        if(mobileMenu.style.display === 'none' || !mobileMenu.style.display){
+          mobileMenu.style.display = 'block';
+          mobileMenu.style.display = 'none';
+</script>
+
+                    </div>
+
+                    <div class="navigation-section">
+                        <a href="recits.html" class="nav-button">← Retour aux récits</a>
+                        <a href="recit-6.html" class="nav-button">Récit suivant →</a>
+                    </div>
+                </div>
+            </section>
+    
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>&copy; 2024 École de Kung Fu Nam Anh. Tous droits réservés.</p>
+                <p>Paris - Cours traditionnels - Maître authentique</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

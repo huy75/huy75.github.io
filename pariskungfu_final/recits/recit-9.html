@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Et c'était un adieu - Paris Kung Fu</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #2C3E50;
+            background-color: #FEFEFE;
+        }
+
+        .page-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 0;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #FAF8F3 0%, #E8DCC0 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .main-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #A0522D;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #6C7B7F;
+            font-style: italic;
+        }
+
+        .story-content {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .story-body {
+            margin-bottom: 60px;
+        }
+
+        .story-title, .chapter-title, .section-title {
+            color: #A0522D;
+            margin: 40px 0 20px 0;
+            font-family: 'Georgia', serif;
+        }
+
+        .story-title {
+            font-size: 2.5rem;
+            border-bottom: 3px solid #A0522D;
+            padding-bottom: 15px;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-top: 50px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-top: 35px;
+        }
+
+        .story-paragraph {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 1.9;
+        }
+
+        .story-paragraph:first-letter {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #A0522D;
+        }
+
+        .navigation-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-top: 2px solid #E8DCC0;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #A0522D;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #8B4513;
+        }
+
+        .site-footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .story-paragraph {
+                font-size: 1.1rem;
+            }
+
+            .navigation-section {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="page-container">
+        <nav class="bg-white shadow-lg sticky top-0 z-50"><div class="container mx-auto px-4"><div class="flex justify-between items-center py-4"><div class="text-2xl font-bold" style="color: var(--red);"> École Pei Mei Orthodoxe </div><!-- Menu hamburger button (mobile only) --><button class="mobile-menu-button" id="mobileMenuButton" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button><!-- Desktop Menu --><div class="desktop-menu hidden md:flex space-x-1"><div class="menu-item"><a class="nav-link" href="index.html">Accueil</a></div><div class="menu-item"><a class="nav-link" href="#">Histoire <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="histoire-shaolin.html">Histoire Shaolin</a><a href="histoire-pei-mei.html">Histoire Pei Mei</a><a href="genealogie.html">Généalogie</a></div></div><div class="menu-item"><a class="nav-link" href="#">Grand-Maître Nam Anh <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="biographie.html">Biographie</a><a href="recits.html">Récits</a><a href="interview.html">Interview Télé-Monde</a></div></div><div class="menu-item"><a class="nav-link" href="#">Enseignement <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="style-pei-mei.html">Le Style Pei Mei</a><a href="bienfaits.html">Les Bienfaits</a><a href="programme.html">Programme</a></div></div><div class="menu-item"><a class="nav-link" href="#">Philosophie <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="voie-kung-fu.html">La Voie du Kung Fu</a><a href="philosophies-base.html">3 Philosophies de Base</a><a href="cinq-respects.html">5 Respects</a><a href="regle-jade.html">Règle de Jade</a></div></div><div class="menu-item"><a class="nav-link" href="#">Infos Pratiques <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="contact.html">Contact</a><a href="questions-reponses.html">Questions-Réponses</a><a href="reconnaitre-ecole.html">Reconnaître une Bonne École</a></div></div></div></div></div></nav>
+
+        <main class="main-content">
+
+            <section class="hero-section">
+                <div class="hero-content">
+                    
+                    <div class="subtitle-section">
+                        <p class="hero-subtitle">Histoire authentique transmise par Maître Nam Anh</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="story-content">
+                <div class="content-wrapper">
+                    <div class="story-body">
+
+<!-- Navigation -->
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+<div class="content-section">
+
+</div>
+</div>
+<!-- Hero Section -->
+<section class="hero-section text-blue-grey">
+<div class="content-section">
+<div class="mb-8">
+<img src="https://raw.githubusercontent.com/huy75/huy75.github.io/main/img/un_adieu.png" 
+               alt="Illustration pour recit-9" 
+               class="rounded-lg shadow-lg mx-auto" 
+               style="max-width: 100%; height: auto; max-height: 400px; object-fit: cover;">
+</div><p class="story-paragraph">École Pei Mei Orthodoxe - Art martial traditionnel chinois</p><p class="story-paragraph">L'héritage spirituel et martial de l'École Pei Mei Orthodoxe</p>
+<h1 class="story-title">Et c'était un adieu</h1>
+<p class="story-paragraph">
+                Récit du Grand Maître Nam Anh
+            </p>
+</div>
+</section>
+<!-- Story Content -->
+<section class="py-16 section-cream">
+<div class="content-section">
+<div class="story-content">
+<div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+<div class="text-content text-blue-grey"> <p class="story-paragraph">Le 19 décembre 1976, dans un camp de concentration nommé Chi Hoa.</p>
+<p class="story-paragraph">Le dernier son du gong résonne encore dans l'air ; déjà tous les détenus se précipitent dans la cour, cherchant une bonne place au soleil. Le vieux maître et moi nous éloignons de la foule pour aspirer un peu de tranquillité. Ce matin, le vaste espace de la cour centrale est baigné d'une lumière jaune dorée, celle de la trahison karmique et fatale. Quelques jours avant la veille de Noël, l'odeur de fête flotte dans l'atmosphère, rendant nos cœurs très lourds.</p>
+<p class="story-paragraph">Le vieux maître m'appelle d'un ton inhabituellement affectueux :  – Mon fils, viens t'asseoir avec moi. J'ai une sensation de picotement dans le dos.</p>
+<p class="story-paragraph">Pour la énième fois, je soulève la chemise en question et commence à gratter la peau ridée par les années et ravagée par une forte gale, celle qui tue lentement mais sûrement de nombreux prisonniers en les momifiant sous une épaisse couche de pus et de sang.</p>
+<p class="story-paragraph">Soudain, il me demande :  – Mon fils ! Demain, pleuvra-t-il ou fera-t-il beau ?</p>
+<p class="story-paragraph">Je m’appuie sur ma main gauche, calculant avec les doigts selon la méthode divinatoire qu'il m'a enseignée :  – Grand Maître, il y a une grande possibilité de tempête et de pluie demain, puis j'hésite un instant... mais une tempête en saison sèche est impossible, non ?! Et pourtant, ce diagramme signifie de l'eau, et même beaucoup d'eau ! Il se tourne, l'air heureux, me tapotant l'épaule :  – C'est très bien ! Mais tu dois t'entraîner beaucoup plus, mon fils ! Des milliers de théories ne valent pas une seule pratique, souviens-toi ! Cette méthode est très efficace et a été transmise depuis l'époque des Royaumes Combattants (1).</p>
+<p class="story-paragraph">Incertain, je lui demande :  – Il ne va pas pleuvoir demain, n’est-ce pas, Grand Maître ?  – Si ! Il pleuvra beaucoup dans nos cœurs et dans nos âmes, mon fils !</p>
+<p class="story-paragraph">Atteignant ses sourcils blancs d'un geste méditatif, son regard plongea dans un néant mystérieux tandis qu'il caressait soigneusement et lentement sa longue barbe : une habitude souvent observée chez les sages de l'Orient. Comme toujours, je respecte ce changement d'attitude et attends patiemment ses révélations. Finalement, il revient à moi en me serrant les mains. Je ressens une énergie forte et chaleureuse dans sa poigne de fer :  – Mon fils, aujourd'hui est notre dernier entretien. Je vais donc te donner la réponse que tu attends depuis longtemps.  – Grand Maître, je suis désolé, mais depuis un an maintenant, j'ai compris l'essence de votre enseignement : j'ai oublié la haine, je ne connais plus la peur et même mon bonheur conjugal n'est plus que des images floues et insignifiantes. Je préfère cette paix de l'esprit plutôt que de me tourmenter pour le moindre succès ou la moindre défaite sur le chemin de la poussière.</p>
+<p class="story-paragraph">La voix du vieux Maître devient consolante et autoritaire :  – Mon fils ! Si la vie se déroulait selon la volonté de chacun, les vicissitudes existeraient-elles ? Et si toutes les routes étaient faciles, sans danger ni péril, comment pourrait-on apprécier les cœurs vaillants ? Mon cher disciple, tu n’as pas encore réglé tes dettes envers cette vie. Ne t’inquiète pas, la colère et la passion, telles des phénix renaissant de leurs cendres, te réincarneront lors de ton retour à la société.  – Mais Grand Maître ! Demain sera notre séparation et je voudrais…</p>
+<p class="story-paragraph">Il m'interrompt d'un geste de la main et claque sa langue :  – Les humains veulent vivre éternellement et craignent la mort autant qu'ils désirent être réunis plutôt que séparés, sans savoir qu'il faut mourir pour connaître la naissance et être séparé pour se réjouir du futur retour. Toi, un « bien compris », ne pourras-tu pas éviter cette voie habituelle ?</p>
+<p class="story-paragraph">La pluie dans mon âme et le feu dans mon cœur : les deux forces, yin et yang, fusionnent en moi, m'entourant d'une épaisse torpeur. J'entends à peine la voix du vieux Maître :  – Quel est ton nom ?</p>
+<p class="story-paragraph">Et soudain, sans attendre ma réponse, il rugit comme le tonnerre :  – À quoi sert un nom ?</p>
+<p class="story-paragraph">Ces mots résonnèrent dans l'abîme de la dimension spirituelle, me tirant hors de l'ignorance. Je relevai la tête avec fierté. Le Grand Maître se tenait devant moi, austère et impassible, tel Lao Tseu dans une statue de marbre. Ses longs sourcils blancs tombaient comme des rideaux dans ses orbites creuses et profondes, où brillaient deux sources bouillonnantes d'énergie. Il ne lui restait plus que trois saisons des pluies, bien qu'il eût déjà traversé un siècle de sang, de larmes et de souffrances, marqué sur son corps frêle et courbé par le poids de l'existence. Il m'explique :  – Selon la physiognomonie chinoise, des sourcils de dragon, des yeux de phénix et un regard de tigre prédisent une carrière extraordinaire aussi bien dans la littérature que dans les arts martiaux : ton nom sera prononcé au-delà des frontières lointaines… Tu as un mandat à accomplir, mais éloigne-toi de la politique car elle ne fera que ruiner ton âme… Et souviens-toi que les armes de l'homme noble sont ses vertus et la vérité, tandis que celles des petits hommes sont les insultes et les intrigues.</p>
+<p class="story-paragraph">– Mais Grand Maître ! Comment pourrais-je être à la hauteur d'une tâche si grande ?</p>
+<p class="story-paragraph">– Écoute ! Le succès comme la défaite ne peuvent évaluer les « grands cœurs ». De plus, j’ai déjà quelqu’un en mémoire qui pourra t’apporter plus que moi en termes de techniques et de connaissances. Pour accomplir cela, dès ta libération, tu iras voir cette personne et lui raconteras une « petite histoire » (2). Il reconnaîtra ta place auprès de moi et exaucera tes souhaits. Et c’est tout !</p>
+<p class="story-paragraph">Tournant sur ses talons, il me glisse un morceau de papier sur lequel sont inscrites les coordonnées de mon futur guide. Le lendemain, alors qu'il faisait encore sombre, le vieux Maître faisait partie des centaines de détenus politiques déportés vers une région montagneuse lointaine du Nord. Derrière les barreaux de fer, je distinguais à peine sa petite silhouette parmi la foule recroquevillée par le froid du matin. Il s'éloigna lentement, sans se tourner dans ma direction, même pour une dernière fois tant attendue, sachant que je souhaitais profondément que ce ne soit pas un adieu !</p>
+<p class="story-paragraph">À la mémoire du Grand Maître Hang Van Giai</p>
+<p class="story-paragraph">Grand Maître Nam Anh, Montréal, le 20 août 1999.</p>
+<p class="story-paragraph">(1) Les Royaumes Combattants : 3e siècle av. J.-C.  (2) Une « petite histoire » : Ce court récit est un dialogue entre un moine et ses deux disciples, que je n’ai compris que quelques années plus tard, avec l’aide du Grand Maître Nguyen Minh.</p>
+</div>
+</div>
+<!-- Navigation -->
+<div class="mt-12 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+<a class="bg-blue-grey hover:bg-blue-grey-medium text-white px-6 py-3 rounded-lg transition-colors inline-flex items-center" href="recits.html">
+<i class="fas fa-arrow-left mr-2"></i> Retour aux récits
+                    </a>
+<a class="bg-red hover:bg-dark-red text-white px-6 py-3 rounded-lg transition-colors inline-flex items-center" href="recit-8.html">
+<i class="fas fa-arrow-left mr-2"></i> Récit précédent
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+
+<!-- JavaScript -->
+<script>
+        // Menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('-translate-x-full');
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+
+        // Fermer le menu mobile quand on clique en dehors
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('-translate-x-full');
+
+        // Sous-menus mobiles
+        function toggleMobileSubmenu(menuId) {
+            const submenu = document.getElementById(menuId + '-submenu');
+            const chevron = event.target.querySelector('i');
+
+            if (submenu.classList.contains('hidden')) {
+                submenu.classList.remove('hidden');
+                chevron.classList.remove('fa-chevron-down');
+                chevron.classList.add('fa-chevron-up');
+                submenu.classList.add('hidden');
+                chevron.classList.remove('fa-chevron-up');
+                chevron.classList.add('fa-chevron-down');
+    </script>
+<script>
+    function toggleMobileMenu(){
+      const mobileMenu=document.querySelector('.mobile-menu');
+      if(mobileMenu){
+        if(mobileMenu.style.display === 'none' || !mobileMenu.style.display){
+          mobileMenu.style.display = 'block';
+          mobileMenu.style.display = 'none';
+</script>
+
+                    </div>
+
+                    <div class="navigation-section">
+                        <a href="recits.html" class="nav-button">← Retour aux récits</a>
+                        
+                    </div>
+                </div>
+            </section>
+    
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>&copy; 2024 École de Kung Fu Nam Anh. Tous droits réservés.</p>
+                <p>Paris - Cours traditionnels - Maître authentique</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

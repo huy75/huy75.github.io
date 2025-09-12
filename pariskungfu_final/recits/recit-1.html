@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La main noire de l’empereur &amp; la trahison de Pak Mei - Paris Kung Fu</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #2C3E50;
+            background-color: #FEFEFE;
+        }
+
+        .page-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 0;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #FAF8F3 0%, #E8DCC0 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .main-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #A0522D;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #6C7B7F;
+            font-style: italic;
+        }
+
+        .story-content {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .story-body {
+            margin-bottom: 60px;
+        }
+
+        .story-title, .chapter-title, .section-title {
+            color: #A0522D;
+            margin: 40px 0 20px 0;
+            font-family: 'Georgia', serif;
+        }
+
+        .story-title {
+            font-size: 2.5rem;
+            border-bottom: 3px solid #A0522D;
+            padding-bottom: 15px;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-top: 50px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-top: 35px;
+        }
+
+        .story-paragraph {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 1.9;
+        }
+
+        .story-paragraph:first-letter {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #A0522D;
+        }
+
+        .navigation-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-top: 2px solid #E8DCC0;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #A0522D;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #8B4513;
+        }
+
+        .site-footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .story-paragraph {
+                font-size: 1.1rem;
+            }
+
+            .navigation-section {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="page-container">
+        <nav class="bg-white shadow-lg sticky top-0 z-50"><div class="container mx-auto px-4"><div class="flex justify-between items-center py-4"><div class="text-2xl font-bold" style="color: var(--red);"> École Pei Mei Orthodoxe </div><!-- Menu hamburger button (mobile only) --><button class="mobile-menu-button" id="mobileMenuButton" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button><!-- Desktop Menu --><div class="desktop-menu hidden md:flex space-x-1"><div class="menu-item"><a class="nav-link" href="index.html">Accueil</a></div><div class="menu-item"><a class="nav-link" href="#">Histoire <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="histoire-shaolin.html">Histoire Shaolin</a><a href="histoire-pei-mei.html">Histoire Pei Mei</a><a href="genealogie.html">Généalogie</a></div></div><div class="menu-item"><a class="nav-link" href="#">Grand-Maître Nam Anh <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="biographie.html">Biographie</a><a href="recits.html">Récits</a><a href="interview.html">Interview Télé-Monde</a></div></div><div class="menu-item"><a class="nav-link" href="#">Enseignement <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="style-pei-mei.html">Le Style Pei Mei</a><a href="bienfaits.html">Les Bienfaits</a><a href="programme.html">Programme</a></div></div><div class="menu-item"><a class="nav-link" href="#">Philosophie <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="voie-kung-fu.html">La Voie du Kung Fu</a><a href="philosophies-base.html">3 Philosophies de Base</a><a href="cinq-respects.html">5 Respects</a><a href="regle-jade.html">Règle de Jade</a></div></div><div class="menu-item"><a class="nav-link" href="#">Infos Pratiques <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="contact.html">Contact</a><a href="questions-reponses.html">Questions-Réponses</a><a href="reconnaitre-ecole.html">Reconnaître une Bonne École</a></div></div></div></div></div></nav>
+
+        <main class="main-content">
+
+            <section class="hero-section">
+                <div class="hero-content">
+                    
+                    <div class="subtitle-section">
+                        <p class="hero-subtitle">Histoire authentique transmise par Maître Nam Anh</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="story-content">
+                <div class="content-wrapper">
+                    <div class="story-body">
+
+<!-- Navigation -->
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+<div class="content-section">
+
+</div>
+</div>
+<!-- Hero Section -->
+<section class="hero-section text-blue-grey">
+<div class="content-section">
+<div class="mb-8">
+<img src="https://raw.githubusercontent.com/huy75/huy75.github.io/main/img/la_main_noire.png" 
+               alt="Illustration pour recit-1" 
+               class="rounded-lg shadow-lg mx-auto" 
+               style="max-width: 100%; height: auto; max-height: 400px; object-fit: cover;">
+</div><p class="story-paragraph">École Pei Mei Orthodoxe - Art martial traditionnel chinois</p><p class="story-paragraph">Grand Maître Nam Anh, gardien de la tradition de l'École Pei Mei Orthodoxe</p>
+<h1 class="story-title">La main noire de l’empereur &amp; la trahison de Pak Mei</h1>
+<p class="story-paragraph">
+                Récit du Grand Maître Nam Anh
+            </p>
+</div>
+</section>
+<!-- Story Content -->
+<section class="py-16 section-cream">
+<div class="content-section">
+<div class="story-content">
+<div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+<div class="text-content text-blue-grey"> <p class="story-paragraph">Cet article a pour but de partager avec vous quelques réflexions du Grand Maître Nam Anh concernant la supposée trahison de Pak Mei, telle qu'elle a été dépeinte par le discours officiel sous le règne de Qianlong et largement diffusée depuis.</p>
+<p class="story-paragraph">Quel que soit le type de régime politique, les autorités en place ont toujours exercé un contrôle de l'information visant à légitimer et à consolider leur pouvoir. La Chine impériale ne faisait pas exception. La dynastie Qing illustre parfaitement l'utilisation systématique de l'information comme outil de propagande et de contrôle, avec des objectifs idéologiques et politiques.</p>
+<p class="story-paragraph">L'invasion de la Chine par la Mandchourie a évincé la classe supérieure des Ming du pouvoir. Les Qing, nouveaux maîtres de l'empire, ont élevé la philosophie de Confucius, chère aux Chinois, au rang de véritable culte d'État. Le principe de l'autorité fut réaffirmé, et l'obéissance devint une vertu, garantissant une paix sociale durable.</p>
+<p class="story-paragraph">L'établissement de concours officiels marqua le rétablissement de bonnes relations entre l'administration et la Cour. Lors de ces concours, les candidats devaient obtenir l'approbation des autorités avant d'accéder à des fonctions officielles. Les érudits furent mis à contribution dans des campagnes vastes et constantes d'endoctrinement de la population. Ainsi, en 1670, l'empereur Kangxi, grand-père de Qianlong, publia les « Instructions sacrées », une série de 16 maximes destinées à guider le comportement quotidien de chaque sujet. Les magistrats les diffusèrent largement sous forme d'histoires, de chansons, de pièces de théâtre, qui finirent par s'intégrer dans la vie quotidienne des paysans.</p>
+<p class="story-paragraph">Pour asseoir leur domination et garantir le respect de la noblesse chinoise, les empereurs mandchous se posèrent en grands protecteurs des lettres et financèrent de vastes projets intellectuels. Ainsi, le célèbre « Dictionnaire Kangxi » et une grande encyclopédie de 5000 chapitres furent publiés. Qianlong entreprit de constituer une collection d'œuvres classiques chinoises : littérature canonique, œuvres historiques, philosophiques et littéraires. Sur environ 10 869 œuvres, seulement 3 697 furent jugées dignes de sélection. Sous ce despotisme éclairé, une inquisition littéraire impitoyable et une censure omniprésente furent mises en place. Les œuvres jugées inappropriées par l'empire furent détruites, et les auteurs dissidents persécutés et éliminés.</p>
+<p class="story-paragraph">Les Qing réécrivirent l'histoire de la Chine afin d'en faire la seule version officielle et acceptable. Bien entendu, ce discours historique glorifiait les Mandchous victorieux.</p>
+<p class="story-paragraph">Cependant, des recherches archéologiques et historiques récentes ont remis en question la véracité de cette version de l'histoire. La découverte de documents anciens et de sites mortuaires soutient ces interrogations critiques.</p>
+<p class="story-paragraph">La mort soudaine et inexpliquée de l'empereur Yongzhen (1722-1735) suscite encore des questions aujourd'hui. Pourquoi son tombeau, contrairement au protocole traditionnel, fut-il construit à plus de 100 kilomètres des tombes de son père et de son grand-père ? La Cour impériale n'a jamais précisé la cause de sa mort. Pourquoi ? Le silence des autorités a largement contribué à la propagation de plusieurs rumeurs. Parmi celles-ci, l'une affirme que l'empereur Yongzhen aurait été assassiné par Lu Siniang, une véritable légende chinoise surnommée « La Dame à la Cape Rose ».</p>
+<p class="story-paragraph">Désirant venger la mort de son père, assassiné par Yongzhen, elle aurait reçu une formation extraordinaire auprès de Grands Maîtres en arts martiaux. Faisant partie des « chevaliers errants », elle possédait des compétences martiales de haut niveau qui lui permettaient de courir sur les toits, la rendant insaisissable. La légende raconte qu'elle aurait décapité l'empereur en lançant une guillotine volante sur sa tête. La guillotine volante était une arme spéciale composée de trois lames rotatives qui décapitaient instantanément la victime. Elle aurait utilisé cette stratégie car Yongzhen, lui-même grand guerrier, était capable de tuer à distance grâce à sa profonde maîtrise des techniques énergétiques de haut niveau. Comme personne ne pouvait s'approcher de l'empereur, son seul choix aurait été d'utiliser cette arme.</p>
+<p class="story-paragraph">Bien sûr, les Qing ont toujours nié cela, affirmant qu'en raison de sa garde rapprochée, il était impossible pour quiconque de s'approcher suffisamment de l'empereur pour utiliser une telle arme. Une rumeur persistante soutient qu'une fausse tête aurait été placée dans le tombeau du monarque… et que des recherches archéologiques auraient confirmé ces rumeurs. Le régime continue de nier catégoriquement ces allégations.</p>
+<p class="story-paragraph">De plus, selon le discours officiel, la destruction du Temple de Shaolin par les troupes de Qianlong fut rendue possible par la trahison de Pak Mei, l'un des Cinq Anciens ayant survécu au massacre. Très en colère après ses échecs répétés à accéder au poste de Grand Abbé, on raconte qu'il aurait décidé de se venger en livrant le Temple aux troupes impériales. Cette version de l'histoire a été perpétuée par de nombreux films, récits et œuvres écrites, et n'a donc jamais été remise en question.</p>
+<p class="story-paragraph">Ainsi, pendant 2 ou 3 siècles, l'école Pak Mei fut vilipendée en raison de cette condamnation qui ternissait sa réputation.</p>
+<p class="story-paragraph">D'un point de vue critique, cette version soulève des questions alarmantes. Si Pak Mei était vraiment un traître, pourquoi son école n'a-t-elle pas prospéré sous le règne des Qing grâce à sa nouvelle alliance ? Pourquoi n'y a-t-il pas eu une augmentation significative des disciples de Pak Mei ? Pourquoi les grandes écoles de kung fu n'ont-elles pas mené de guerre contre Pak Mei, comme elles le faisaient habituellement avec les traîtres ?</p>
+<p class="story-paragraph">Aujourd'hui, il est possible de prouver que les deux livres sur les arts martiaux écrits par Qianlong contiennent plusieurs histoires qui ont été entièrement inventées.  Ainsi, il est pertinent de nous interroger sur l’authenticité de la version officielle de l’histoire et de remettre en question la prétendue trahison de Pak Mei.</p>
+<p class="story-paragraph">Pierre Flores Malcolm St-Pierre</p>
+<p class="story-paragraph">Traduit de l’anglais au français par: Nam An (Alexandre Berges-Verville)</p>
+</div>
+</div>
+<!-- Navigation -->
+<div class="mt-12 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+<a class="bg-blue-grey hover:bg-blue-grey-medium text-white px-6 py-3 rounded-lg transition-colors inline-flex items-center" href="recits.html">
+<i class="fas fa-arrow-left mr-2"></i> Retour aux récits
+                    </a>
+<a class="bg-red hover:bg-dark-red text-white px-6 py-3 rounded-lg transition-colors inline-flex items-center" href="recit-2.html">
+                        Récit suivant <i class="fas fa-arrow-right ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+
+<!-- JavaScript -->
+<script>
+        // Menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('-translate-x-full');
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+
+        // Fermer le menu mobile quand on clique en dehors
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('-translate-x-full');
+
+        // Sous-menus mobiles
+        function toggleMobileSubmenu(menuId) {
+            const submenu = document.getElementById(menuId + '-submenu');
+            const chevron = event.target.querySelector('i');
+
+            if (submenu.classList.contains('hidden')) {
+                submenu.classList.remove('hidden');
+                chevron.classList.remove('fa-chevron-down');
+                chevron.classList.add('fa-chevron-up');
+                submenu.classList.add('hidden');
+                chevron.classList.remove('fa-chevron-up');
+                chevron.classList.add('fa-chevron-down');
+    </script>
+<script>
+    function toggleMobileMenu(){
+      const mobileMenu=document.querySelector('.mobile-menu');
+      if(mobileMenu){
+        if(mobileMenu.style.display === 'none' || !mobileMenu.style.display){
+          mobileMenu.style.display = 'block';
+          mobileMenu.style.display = 'none';
+</script>
+
+                    </div>
+
+                    <div class="navigation-section">
+                        <a href="recits.html" class="nav-button">← Retour aux récits</a>
+                        <a href="recit-2.html" class="nav-button">Récit suivant →</a>
+                    </div>
+                </div>
+            </section>
+    
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>&copy; 2024 École de Kung Fu Nam Anh. Tous droits réservés.</p>
+                <p>Paris - Cours traditionnels - Maître authentique</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Une rencontre inopinée - Paris Kung Fu</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #2C3E50;
+            background-color: #FEFEFE;
+        }
+
+        .page-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 0;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #FAF8F3 0%, #E8DCC0 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .main-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #A0522D;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #6C7B7F;
+            font-style: italic;
+        }
+
+        .story-content {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .story-body {
+            margin-bottom: 60px;
+        }
+
+        .story-title, .chapter-title, .section-title {
+            color: #A0522D;
+            margin: 40px 0 20px 0;
+            font-family: 'Georgia', serif;
+        }
+
+        .story-title {
+            font-size: 2.5rem;
+            border-bottom: 3px solid #A0522D;
+            padding-bottom: 15px;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-top: 50px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-top: 35px;
+        }
+
+        .story-paragraph {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 1.9;
+        }
+
+        .story-paragraph:first-letter {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #A0522D;
+        }
+
+        .navigation-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-top: 2px solid #E8DCC0;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #A0522D;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #8B4513;
+        }
+
+        .site-footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .story-paragraph {
+                font-size: 1.1rem;
+            }
+
+            .navigation-section {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="page-container">
+        <nav class="bg-white shadow-lg sticky top-0 z-50"><div class="container mx-auto px-4"><div class="flex justify-between items-center py-4"><div class="text-2xl font-bold" style="color: var(--red);"> École Pei Mei Orthodoxe </div><!-- Menu hamburger button (mobile only) --><button class="mobile-menu-button" id="mobileMenuButton" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button><!-- Desktop Menu --><div class="desktop-menu hidden md:flex space-x-1"><div class="menu-item"><a class="nav-link" href="index.html">Accueil</a></div><div class="menu-item"><a class="nav-link" href="#">Histoire <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="histoire-shaolin.html">Histoire Shaolin</a><a href="histoire-pei-mei.html">Histoire Pei Mei</a><a href="genealogie.html">Généalogie</a></div></div><div class="menu-item"><a class="nav-link" href="#">Grand-Maître Nam Anh <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="biographie.html">Biographie</a><a href="recits.html">Récits</a><a href="interview.html">Interview Télé-Monde</a></div></div><div class="menu-item"><a class="nav-link" href="#">Enseignement <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="style-pei-mei.html">Le Style Pei Mei</a><a href="bienfaits.html">Les Bienfaits</a><a href="programme.html">Programme</a></div></div><div class="menu-item"><a class="nav-link" href="#">Philosophie <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="voie-kung-fu.html">La Voie du Kung Fu</a><a href="philosophies-base.html">3 Philosophies de Base</a><a href="cinq-respects.html">5 Respects</a><a href="regle-jade.html">Règle de Jade</a></div></div><div class="menu-item"><a class="nav-link" href="#">Infos Pratiques <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="contact.html">Contact</a><a href="questions-reponses.html">Questions-Réponses</a><a href="reconnaitre-ecole.html">Reconnaître une Bonne École</a></div></div></div></div></div></nav>
+
+        <main class="main-content">
+
+            <section class="hero-section">
+                <div class="hero-content">
+                    
+                    <div class="subtitle-section">
+                        <p class="hero-subtitle">Histoire authentique transmise par Maître Nam Anh</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="story-content">
+                <div class="content-wrapper">
+                    <div class="story-body">
+
+<!-- Navigation -->
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+<div class="content-section">
+
+</div>
+</div>
+<!-- Hero Section -->
+<section class="hero-section text-blue-grey">
+<div class="content-section">
+<div class="mb-8">
+<img src="https://raw.githubusercontent.com/huy75/huy75.github.io/main/img/une_rencontre.png" 
+               alt="Illustration pour recit-7" 
+               class="rounded-lg shadow-lg mx-auto" 
+               style="max-width: 100%; height: auto; max-height: 400px; object-fit: cover;">
+</div><p class="story-paragraph mb-8 leading-loose" style="line-height: 2.0; margin-bottom: 2rem; font-size: 1.1em;">École Pei Mei Orthodoxe - Art martial traditionnel chinois</p><p class="story-paragraph mb-8 leading-loose" style="line-height: 2.0; margin-bottom: 2rem; font-size: 1.1em;">L'enseignement traditionnel du kung fu par Grand Maître Nam Anh</p>
+<h1 class="story-title">"Une rencontre inopinée"</h1>
+<p class="story-paragraph mb-8 leading-loose" style="line-height: 2.0; margin-bottom: 2rem; font-size: 1.1em;">
+                Récit du Grand Maître Nam Anh
+            </p>
+</div>
+</section>
+<!-- Story Content -->
+<section class="py-16 section-cream">
+<div class="content-section">
+<div class="story-content">
+<div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+<div class="text-content text-blue-grey"> 
+                <h3 class="text-xl font-semibold mb-6 mt-12" style="color: var(--red);">La décision de partir</h3>
+                <p class="story-paragraph mb-8 leading-loose" style="line-height: 2.0; margin-bottom: 2rem; font-size: 1.1em;">
+                La décision de quitter le Vietnam pour s'établir au Canada avait été prise et le temps de mettre ce projet en application était arrivé. 
+                Ayant déjà effectué tous les préparatifs nécessaires pour le voyage pour le Canada, le Grand-Maître Nam Anh et sa famille étaient prêts à entamer cette nouvelle étape de leur vie.
+                </p>
+
+                <div class="flex justify-center my-8">
+                    <div class="w-24 h-px bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
+                </div>
+
+                <h3 class="text-xl font-semibold mb-6 mt-12" style="color: var(--red);">Les démarches administratives</h3>
+                <p class="story-paragraph mb-8 leading-loose" style="line-height: 2.0; margin-bottom: 2rem; font-size: 1.1em;">
+                Très rapidement, il obtint une école pour ses enfants et commença les démarches pour l'obtention de sa licence d'enseignement auprès du gouvernement canadien. 
+                Ces formalités administratives représentaient un défi important dans ce nouveau pays, mais le Grand-Maître était déterminé à s'établir durablement.
+                </p>
+
+                <div class="flex justify-center my-8">
+                    <div class="w-24 h-px bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
+                </div>
+
+                <h3 class="text-xl font-semibold mb-6 mt-12" style="color: var(--red);">L'arrivée à Montréal</h3>
+                <p class="story-paragraph mb-8 leading-loose" style="line-height: 2.0; margin-bottom: 2rem; font-size: 1.1em;">
+                Arrivé à Montréal avec sa famille, le Grand-Maître Nam Anh découvrit une nouvelle culture et un environnement complètement différent. 
+                L'adaptation ne fut pas toujours facile, mais sa détermination et son expérience des arts martiaux l'aidèrent à surmonter les obstacles. 
+                Finalement, le temps de mettre ce projet en œuvre était venu.
+                </p>
+                
+</div>
+</div>
+<!-- Navigation -->
+<div class="mt-12 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+<a class="bg-blue-grey hover:bg-blue-grey-medium text-white px-6 py-3 rounded-lg transition-colors inline-flex items-center" href="recits.html">
+<i class="fas fa-arrow-left mr-2"></i> Retour aux récits
+                    </a>
+<a class="bg-red hover:bg-dark-red text-white px-6 py-3 rounded-lg transition-colors inline-flex items-center" href="recit-6.html">
+<i class="fas fa-arrow-left mr-2"></i> Récit précédent
+                    </a>
+<a class="bg-red hover:bg-dark-red text-white px-6 py-3 rounded-lg transition-colors inline-flex items-center" href="recit-8.html">
+                        Récit suivant <i class="fas fa-arrow-right ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+
+<!-- JavaScript -->
+<script>
+        // Menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('-translate-x-full');
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+
+        // Fermer le menu mobile quand on clique en dehors
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('-translate-x-full');
+
+        // Sous-menus mobiles
+        function toggleMobileSubmenu(menuId) {
+            const submenu = document.getElementById(menuId + '-submenu');
+            const chevron = event.target.querySelector('i');
+
+            if (submenu.classList.contains('hidden')) {
+                submenu.classList.remove('hidden');
+                chevron.classList.remove('fa-chevron-down');
+                chevron.classList.add('fa-chevron-up');
+                submenu.classList.add('hidden');
+                chevron.classList.remove('fa-chevron-up');
+                chevron.classList.add('fa-chevron-down');
+    </script>
+<script>
+    function toggleMobileMenu(){
+      const mobileMenu=document.querySelector('.mobile-menu');
+      if(mobileMenu){
+        if(mobileMenu.style.display === 'none' || !mobileMenu.style.display){
+          mobileMenu.style.display = 'block';
+          mobileMenu.style.display = 'none';
+</script>
+
+                    </div>
+
+                    <div class="navigation-section">
+                        <a href="recits.html" class="nav-button">← Retour aux récits</a>
+                        <a href="recit-8.html" class="nav-button">Récit suivant →</a>
+                    </div>
+                </div>
+            </section>
+    
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>&copy; 2024 École de Kung Fu Nam Anh. Tous droits réservés.</p>
+                <p>Paris - Cours traditionnels - Maître authentique</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La pratique des armes traditionnelles - Paris Kung Fu</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #2C3E50;
+            background-color: #FEFEFE;
+        }
+
+        .page-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 0;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #FAF8F3 0%, #E8DCC0 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .main-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #A0522D;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #6C7B7F;
+            font-style: italic;
+        }
+
+        .story-content {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .story-body {
+            margin-bottom: 60px;
+        }
+
+        .story-title, .chapter-title, .section-title {
+            color: #A0522D;
+            margin: 40px 0 20px 0;
+            font-family: 'Georgia', serif;
+        }
+
+        .story-title {
+            font-size: 2.5rem;
+            border-bottom: 3px solid #A0522D;
+            padding-bottom: 15px;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            margin-top: 50px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-top: 35px;
+        }
+
+        .story-paragraph {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 1.9;
+        }
+
+        .story-paragraph:first-letter {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #A0522D;
+        }
+
+        .navigation-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-top: 2px solid #E8DCC0;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #A0522D;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #8B4513;
+        }
+
+        .site-footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .story-paragraph {
+                font-size: 1.1rem;
+            }
+
+            .navigation-section {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="page-container">
+        <nav class="bg-white shadow-lg sticky top-0 z-50"><div class="container mx-auto px-4"><div class="flex justify-between items-center py-4"><div class="text-2xl font-bold" style="color: var(--red);"> École Pei Mei Orthodoxe </div><!-- Menu hamburger button (mobile only) --><button class="mobile-menu-button" id="mobileMenuButton" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button><!-- Desktop Menu --><div class="desktop-menu hidden md:flex space-x-1"><div class="menu-item"><a class="nav-link" href="index.html">Accueil</a></div><div class="menu-item"><a class="nav-link" href="#">Histoire <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="histoire-shaolin.html">Histoire Shaolin</a><a href="histoire-pei-mei.html">Histoire Pei Mei</a><a href="genealogie.html">Généalogie</a></div></div><div class="menu-item"><a class="nav-link" href="#">Grand-Maître Nam Anh <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="biographie.html">Biographie</a><a href="recits.html">Récits</a><a href="interview.html">Interview Télé-Monde</a></div></div><div class="menu-item"><a class="nav-link" href="#">Enseignement <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="style-pei-mei.html">Le Style Pei Mei</a><a href="bienfaits.html">Les Bienfaits</a><a href="programme.html">Programme</a></div></div><div class="menu-item"><a class="nav-link" href="#">Philosophie <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="voie-kung-fu.html">La Voie du Kung Fu</a><a href="philosophies-base.html">3 Philosophies de Base</a><a href="cinq-respects.html">5 Respects</a><a href="regle-jade.html">Règle de Jade</a></div></div><div class="menu-item"><a class="nav-link" href="#">Infos Pratiques <i class="fas fa-chevron-down ml-1"></i></a><div class="submenu"><a href="contact.html">Contact</a><a href="questions-reponses.html">Questions-Réponses</a><a href="reconnaitre-ecole.html">Reconnaître une Bonne École</a></div></div></div></div></div></nav>
+
+        <main class="main-content">
+
+            <section class="hero-section">
+                <div class="hero-content">
+                    
+                    <div class="subtitle-section">
+                        <p class="hero-subtitle">Histoire authentique transmise par Maître Nam Anh</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="story-content">
+                <div class="content-wrapper">
+                    <div class="story-body">
+
+<!-- Navigation -->
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+<div class="content-section">
+
+</div>
+</div>
+<!-- Hero Section -->
+<section class="hero-section text-blue-grey">
+<div class="content-section">
+<div class="mb-8">
+<img src="https://raw.githubusercontent.com/huy75/huy75.github.io/main/img/la_pratique_armes.jpg" 
+               alt="Illustration pour recit-3" 
+               class="rounded-lg shadow-lg mx-auto" 
+               style="max-width: 100%; height: auto; max-height: 400px; object-fit: cover;">
+</div><p class="story-paragraph">École Pei Mei Orthodoxe - Art martial traditionnel chinois</p><p class="story-paragraph">Transmission ancestrale du kung fu Shaolin au sein de l'École Pei Mei</p>
+<h1 class="story-title">La pratique des armes traditionnelles</h1>
+<p class="story-paragraph">
+                Récit du Grand Maître Nam Anh
+            </p>
+</div>
+</section>
+<!-- Story Content -->
+<section class="py-16 section-cream">
+<div class="content-section">
+<div class="story-content">
+<div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+<div class="text-content text-blue-grey"> <p class="story-paragraph">C'est avec l'arrivée de Bodhidharma que le Kung Fu fit son apparition dans la vie monastique en Chine. À partir de ses enseignements, les moines créèrent une série d'arts martiaux dont de nombreuses écoles actuelles peuvent retracer leurs lignées. L'entraînement martial incluait, entre autres, des formes à mains nues et la maîtrise des armes ; la première utilisée fut le bâton, même avant la pratique des arts martiaux, principalement par des moines itinérants. Cet objet s'alignait parfaitement avec la pensée bouddhiste, qui empêche de causer la mort d'un être vivant, et fut longtemps la seule arme pratiquée par les moines.  Un des premiers écrits concernant la participation du Temple Shaolin à une bataille date du 7e siècle, lors d'une expédition menée par Li Shi Min (plus tard, son nom d’empereur sera Tang Taizhong), chargé de sécuriser une zone près du temple. Pris au piège par des bandits, le prince fut sauvé par treize moines armés de bâtons.  Au 14e siècle, sous la dynastie Yuan, le terme « 18 armes de Shaolin » fit son apparition dans une chanson. Pour la première fois, nous avons des preuves d'un changement dans l'arsenal du temple. Il a donc fallu près de 800 ans après sa fondation, et 600 ans après les premiers récits militaires des moines, pour que le répertoire des armes s'élargisse et inclue des lames.  C'est durant la dynastie Ming que l'on trouve plusieurs textes relatant la présence de moines lors de batailles. À cette époque, les moines faisaient partie intégrante des levées de troupes. C'est également à cette période qu'ils auraient mis davantage l'accent sur les pratiques à mains nues, afin de faciliter l'apprentissage et la maîtrise des autres types d'armes.  Les écoles issues du temple Shaolin ont, en général, préservé la pratique de 18 armes, dont une douzaine apparaissent dans plusieurs styles en raison de leur importance culturelle ou historique. Par exemple, le sabre à long manche (Kwan Dao), la lance (Jie), l’épée (Jian), le sabre (Dao) et le bâton (Bang). Ensuite, il existe des armes régionales ou emblématiques de certains styles, comme les couteaux papillon pour le Wing Chun ou les couteaux en corne de cerf pour le Hong Gar.</p>
+<p class="story-paragraph">Autrefois, porter une arme était une preuve de statut. Celui qui portait une épée montrait au monde qu’il était un guerrier prêt à se défendre. C’était essentiel à une époque où il n’y avait pas de police, et les dangers étaient nombreux. Avec la modernisation, l’émergence des forces de l’ordre, des armes à feu et la stabilité politique, les moyens de défense martiale pour la protection personnelle sont en grande partie devenus obsolètes. Nous ne marchons plus avec des épées à la ceinture, et les guerres ne se livrent plus avec l’arc et la lance.</p>
+<p class="story-paragraph">Alors, pourquoi continuer à enseigner ces techniques ? Pourquoi quelqu’un voudrait-il encore pratiquer la maîtrise des armes de nos jours ?  Premièrement, elles permettent un exercice musculaire, l'utilisation de la force avec un objet, afin de projeter cette énergie hors du corps et de développer la souplesse ainsi que la dextérité physique pour l'aspect artistique de l'art martial. C'est pour ces raisons que l'on trouve des armes de différents poids.  Deuxièmement, la pratique exige une grande concentration et une coordination de l'œil et de la main pour éviter de se blesser, de blesser les autres, ou encore de détruire le lieu d'entraînement. Il est intimidant pour beaucoup de tenir un objet capable de causer des dommages, et c'est à travers cet apprentissage que le pratiquant pourra progresser sur la Voie. Au temple, il existait un terme : « Qiang Za Yi Tiao Xian, Gun Da Yi Da Pian », qui peut se résumer ainsi : la pratique du bâton nous permet de mieux percevoir l'espace.  Troisièmement, pour toute école se réclamant de la tradition, il est essentiel de préserver le style sans variation. Comme mentionné précédemment, la pratique des armes a une signification historique, il est donc du devoir de ces écoles de maintenir les formes dans leur intégralité afin que les générations suivantes puissent en bénéficier.  Il est donc essentiel de maintenir l'enseignement des armes, surtout en ces temps modernes où le passé disparaît lentement. Comme le confucianisme nous l'enseigne, pour connaître sa voie, il faut savoir où l'on va, mais surtout d'où l'on vient.</p>
+<p class="story-paragraph">Traduit de l’anglais au français par : Nam An (Alexandre Berges-Verville)</p>
+</div>
+</div>
+<!-- Navigation -->
+<div class="mt-12 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+<a class="bg-blue-grey hover:bg-blue-grey-medium text-white px-6 py-3 rounded-lg transition-colors inline-flex items-center" href="recits.html">
+<i class="fas fa-arrow-left mr-2"></i> Retour aux récits
+                    </a>
+<a class="bg-red hover:bg-dark-red text-white px-6 py-3 rounded-lg transition-colors inline-flex items-center" href="recit-2.html">
+<i class="fas fa-arrow-left mr-2"></i> Récit précédent
+                    </a>
+<a class="bg-red hover:bg-dark-red text-white px-6 py-3 rounded-lg transition-colors inline-flex items-center" href="recit-4.html">
+                        Récit suivant <i class="fas fa-arrow-right ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+
+<!-- JavaScript -->
+<script>
+        // Menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('-translate-x-full');
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+
+        // Fermer le menu mobile quand on clique en dehors
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('-translate-x-full');
+
+        // Sous-menus mobiles
+        function toggleMobileSubmenu(menuId) {
+            const submenu = document.getElementById(menuId + '-submenu');
+            const chevron = event.target.querySelector('i');
+
+            if (submenu.classList.contains('hidden')) {
+                submenu.classList.remove('hidden');
+                chevron.classList.remove('fa-chevron-down');
+                chevron.classList.add('fa-chevron-up');
+                submenu.classList.add('hidden');
+                chevron.classList.remove('fa-chevron-up');
+                chevron.classList.add('fa-chevron-down');
+    </script>
+<script>
+    function toggleMobileMenu(){
+      const mobileMenu=document.querySelector('.mobile-menu');
+      if(mobileMenu){
+        if(mobileMenu.style.display === 'none' || !mobileMenu.style.display){
+          mobileMenu.style.display = 'block';
+          mobileMenu.style.display = 'none';
+</script>
+
+                    </div>
+
+                    <div class="navigation-section">
+                        <a href="recits.html" class="nav-button">← Retour aux récits</a>
+                        <a href="recit-4.html" class="nav-button">Récit suivant →</a>
+                    </div>
+                </div>
+            </section>
+    
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>&copy; 2024 École de Kung Fu Nam Anh. Tous droits réservés.</p>
+                <p>Paris - Cours traditionnels - Maître authentique</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
